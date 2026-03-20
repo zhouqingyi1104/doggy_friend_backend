@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# 提取环境变量到 .env
-echo "APP_URL=${APP_URL}" > /var/www/laravel/.env
+# 追加环境变量到 .env（保留构建时生成的 APP_KEY）
+echo "" >> /var/www/laravel/.env
+echo "APP_URL=${APP_URL}" >> /var/www/laravel/.env
 echo "DB_USERNAME=${DB_USERNAME}" >> /var/www/laravel/.env
 echo "DB_PASSWORD=${DB_PASSWORD}" >> /var/www/laravel/.env
 echo "REDIS_PASSWORD=${REDIS_PASSWORD}" >> /var/www/laravel/.env

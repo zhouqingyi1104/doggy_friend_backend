@@ -101,9 +101,9 @@ export class UserService {
       return this.prisma.user_profiles.update({
         where: { id: existing.id },
         data: {
-          mobile: mobile || existing.mobile,
+          // Removed mobile because user_profiles in db does not have mobile column. 
           name: name || existing.name,
-          grade: grade || existing.grade,
+          grade: grade ? parseInt(grade, 10) : existing.grade,
           major: major || existing.major,
           student_number: studentNumber || existing.student_number,
           college: college || existing.college,
@@ -113,9 +113,9 @@ export class UserService {
       return this.prisma.user_profiles.create({
         data: {
           user_id: userId,
-          mobile: mobile || '',
+          // mobile column not in schema
           name: name || '',
-          grade: grade || '',
+          grade: grade ? parseInt(grade, 10) : 0,
           major: major || '',
           student_number: studentNumber || '',
           college: college || '',

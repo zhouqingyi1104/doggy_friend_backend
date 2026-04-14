@@ -4,6 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
@@ -125,6 +126,7 @@ model colleges {
   created_at DateTime? @db.Timestamp(0)
   updated_at DateTime? @db.Timestamp(0)
   deleted_at DateTime? @db.Timestamp(0)
+  users      users[]
 }
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
@@ -142,6 +144,7 @@ model comments {
   created_at     DateTime? @db.Timestamp(0)
   updated_at     DateTime? @db.Timestamp(0)
   deleted_at     DateTime? @db.Timestamp(0)
+  users          users     @relation(fields: [commenter_id], references: [id])
 
   @@index([commenter_id], map: "comments_commenter_id_index")
   @@index([created_at], map: "comments_created_at_index")
@@ -368,21 +371,19 @@ model password_resets {
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model posts {
   id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
-  poster_id      Int
-  college_id     Int?
-  content        String?   @db.Text
+  poster_id      BigInt
+  college_id     BigInt?
+  content        String?   @db.LongText
   attachments    String?   @db.Text
-  topic          String    @default("无") @db.VarChar(1024)
-  type           Int       @default(0) @db.TinyInt
-  status         Int       @default(0) @db.TinyInt
-  private        Boolean
+  topic          String    @default("无") @db.VarChar(255)
+  status         Int       @default(1) @db.TinyInt
+  private        Int       @default(0) @db.TinyInt
   comment_number Int       @default(0)
   praise_number  Int       @default(0)
   created_at     DateTime? @db.Timestamp(0)
   updated_at     DateTime? @db.Timestamp(0)
   deleted_at     DateTime? @db.Timestamp(0)
-  mobile         String?   @db.VarChar(120)
-  new_column     Int?
+  users          users     @relation(fields: [poster_id], references: [id])
 
   @@index([college_id], map: "posts_college_id_index")
   @@index([created_at], map: "posts_created_at_index")
@@ -741,6 +742,11 @@ model users {
   fans_num           Int       @default(0)
   post_num           Int       @default(0)
   clock_num          Int       @default(0)
+  college_id         BigInt?
+  
+  colleges           colleges? @relation(fields: [college_id], references: [id])
+  posts              posts[]
+  comments           comments[]
 
   @@index([app_id], map: "users_app_id_index")
   @@index([created_at], map: "users_created_at_index")

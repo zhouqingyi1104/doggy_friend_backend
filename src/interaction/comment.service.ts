@@ -88,29 +88,35 @@ export class CommentService {
       }),
     ]);
 
-    // Format response and handle replied comments
-    const formatted = await Promise.all(
-      comments.map(async (comment) => {
-        let refComment = null;
-        if (comment.ref_comment_id) {
-          const ref = await this.prisma.comments.findUnique({
-            where: { id: comment.ref_comment_id },
-            include: {
-              users: { select: { id: true, nickname: true } },
-            },
-          });
-          refComment = ref ? { id: ref.id, content: ref.content, user: ref.users } : null;
-        }
+    // Bulk fetch ref comments to fix N+1 issue
+    const refCommentIds = comments.map(c => c.ref_comment_id).filter(id => id !== null);
+    let refCommentsMap = new Map();
 
-        return {
-          ...comment,
-          commenter: comment.users, // rename users to commenter
-          users: undefined,
-          ref_comment: refComment,
-          attachments: comment.attachments ? comment.attachments.split(',') : [],
-        };
-      })
-    );
+    if (refCommentIds.length > 0) {
+      const refComments = await this.prisma.comments.findMany({
+        where: { id: { in: refCommentIds as bigint[] } },
+        include: { users: { select: { id: true, nickname: true } } }
+      });
+      refComments.forEach(ref => {
+        refCommentsMap.set(ref.id.toString(), { id: ref.id, content: ref.content, user: ref.users });
+      });
+    }
+
+    // Format response and handle replied comments
+    const formatted = comments.map((comment) => {
+      let refComment: any = null;
+      if (comment.ref_comment_id) {
+        refComment = refCommentsMap.get(comment.ref_comment_id.toString()) || null;
+      }
+
+      return {
+        ...comment,
+        commenter: comment.users, // rename users to commenter
+        users: undefined,
+        ref_comment: refComment,
+        attachments: comment.attachments ? comment.attachments.split(',') : [],
+      };
+    });
 
     return {
       data: formatted,

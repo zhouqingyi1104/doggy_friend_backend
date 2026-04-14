@@ -109,10 +109,37 @@ export class PostService {
       this.prisma.posts.count({ where: whereClause }),
     ]);
 
-    // Format posts
-    const formattedPosts = await Promise.all(
-      posts.map(async (post) => this.formatSinglePost(post, currentUserId))
-    );
+    // Format posts - Optimize N+1 queries by fetching praises in bulk
+    const postIds = posts.map(p => p.id);
+    
+    // Bulk fetch praises
+    const praises = await this.prisma.praises.findMany({
+      where: {
+        owner_id: currentUserId,
+        obj_id: { in: postIds },
+        obj_type: 1, // 1 for post
+      },
+    });
+
+    const praisedPostIds = new Set(praises.map(p => p.obj_id.toString()));
+
+    const formattedPosts = posts.map((post) => {
+      // Format poster info (handle anonymity)
+      const poster = post.private === 1 ? {
+        id: 0,
+        nickname: '匿名同学',
+        avatar: 'https://image.kucaroom.com/niming.png',
+        gender: 0,
+      } : post.users;
+
+      return {
+        ...post,
+        users: undefined, // remove raw users relation
+        poster,
+        has_praise: praisedPostIds.has(post.id.toString()),
+        attachments: post.attachments ? post.attachments.split(',') : [],
+      };
+    });
 
     return {
       data: formattedPosts,

@@ -1,13 +1,18 @@
 import { Controller, Get, Post, Body, Req, UseGuards, Param, Query } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiBearerAuth, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { UserService } from './user.service';
 import { JwtAuthGuard } from '../auth/jwt.guard';
 
+@ApiTags('用户资料 (User)')
+@ApiBearerAuth()
 @Controller('api/wechat/user')
 @UseGuards(JwtAuthGuard) // Protect all user routes
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get('personal')
+  @ApiOperation({ summary: '获取个人/他人资料', description: '如果有 user_id 参数则获取他人的资料，否则获取自己当前的资料' })
+  @ApiQuery({ name: 'user_id', required: false, description: '目标用户的 ID' })
   async personal(@Req() req, @Query('user_id') queryUserId: string) {
     const userId = queryUserId ? BigInt(queryUserId) : req.user.id;
     return this.userService.getUser(userId);

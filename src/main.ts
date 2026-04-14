@@ -1,5 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
+import { NestExpressApplication } from '@nestjs/platform-express';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
@@ -10,8 +12,14 @@ import rateLimit from 'express-rate-limit';
 };
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  // Use NestExpressApplication to configure proxy
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
   
+  // ⚠️ API Tester Review Fix: Trust Proxy
+  // Since CloudBase / CloudRun uses a load balancer, we must trust the proxy 
+  // so rate limiting uses the actual client IP, not the load balancer IP.
+  app.set('trust proxy', 1);
+
   // Security Middlewares
   app.use(helmet());
   app.use(
@@ -32,6 +40,16 @@ async function bootstrap() {
       transform: true,
     }),
   );
+
+  // Swagger API Documentation Setup
+  const config = new DocumentBuilder()
+    .setTitle('Doggy Friend Backend API')
+    .setDescription('The API documentation for WeChat Mini Program')
+    .setVersion('1.0')
+    .addBearerAuth() // Enable JWT Auth in Swagger UI
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api-docs', app, document);
   
   await app.listen(process.env.PORT ?? 80);
 }

@@ -4,15 +4,10 @@ export declare class UserController {
     constructor(userService: UserService);
     personal(req: any, queryUserId: string): Promise<{
         id: bigint;
-        mobile: string | null;
-        college_id: bigint | null;
-        status: number;
-        created_at: Date | null;
-        updated_at: Date | null;
-        deleted_at: Date | null;
         app_id: bigint;
         nickname: string | null;
         password: string | null;
+        mobile: string | null;
         avatar: string | null;
         gender: number;
         open_id: string | null;
@@ -22,27 +17,27 @@ export declare class UserController {
         language: string;
         province: string;
         type: number;
+        status: number;
         remember_token: string | null;
         active_value: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
         personal_signature: string;
         follow_num: number;
         fans_num: number;
         post_num: number;
         clock_num: number;
+        college_id: bigint | null;
     } | null>;
     school(req: any): Promise<string>;
     recommendSchool(): Promise<unknown>;
     setCollege(req: any, collegeId: string): Promise<{
         id: bigint;
-        mobile: string | null;
-        college_id: bigint | null;
-        status: number;
-        created_at: Date | null;
-        updated_at: Date | null;
-        deleted_at: Date | null;
         app_id: bigint;
         nickname: string | null;
         password: string | null;
+        mobile: string | null;
         avatar: string | null;
         gender: number;
         open_id: string | null;
@@ -52,13 +47,18 @@ export declare class UserController {
         language: string;
         province: string;
         type: number;
+        status: number;
         remember_token: string | null;
         active_value: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
         personal_signature: string;
         follow_num: number;
         fans_num: number;
         post_num: number;
         clock_num: number;
+        college_id: bigint | null;
     }>;
     searchCollege(name: string): Promise<{
         id: bigint;
@@ -66,15 +66,10 @@ export declare class UserController {
     }[]>;
     clearSchool(req: any): Promise<{
         id: bigint;
-        mobile: string | null;
-        college_id: bigint | null;
-        status: number;
-        created_at: Date | null;
-        updated_at: Date | null;
-        deleted_at: Date | null;
         app_id: bigint;
         nickname: string | null;
         password: string | null;
+        mobile: string | null;
         avatar: string | null;
         gender: number;
         open_id: string | null;
@@ -84,28 +79,28 @@ export declare class UserController {
         language: string;
         province: string;
         type: number;
+        status: number;
         remember_token: string | null;
         active_value: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
         personal_signature: string;
         follow_num: number;
         fans_num: number;
         post_num: number;
         clock_num: number;
+        college_id: bigint | null;
     }>;
     updateUser(req: any, body: {
         nickname: string;
         avatar: string;
     }): Promise<{
         id: bigint;
-        mobile: string | null;
-        college_id: bigint | null;
-        status: number;
-        created_at: Date | null;
-        updated_at: Date | null;
-        deleted_at: Date | null;
         app_id: bigint;
         nickname: string | null;
         password: string | null;
+        mobile: string | null;
         avatar: string | null;
         gender: number;
         open_id: string | null;
@@ -115,13 +110,18 @@ export declare class UserController {
         language: string;
         province: string;
         type: number;
+        status: number;
         remember_token: string | null;
         active_value: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
         personal_signature: string;
         follow_num: number;
         fans_num: number;
         post_num: number;
         clock_num: number;
+        college_id: bigint | null;
     }>;
     createProfile(req: any, body: {
         mobile: string;
@@ -132,12 +132,12 @@ export declare class UserController {
         college: string;
     }): Promise<{
         id: bigint;
-        name: string;
+        nickname: string;
+        avatar: string;
         created_at: Date | null;
         updated_at: Date | null;
         deleted_at: Date | null;
-        nickname: string;
-        avatar: string;
+        name: string;
         user_id: bigint;
         student_number: string;
         grade: number;
@@ -146,15 +146,10 @@ export declare class UserController {
     }>;
     user(id: string): Promise<{
         id: bigint;
-        mobile: string | null;
-        college_id: bigint | null;
-        status: number;
-        created_at: Date | null;
-        updated_at: Date | null;
-        deleted_at: Date | null;
         app_id: bigint;
         nickname: string | null;
         password: string | null;
+        mobile: string | null;
         avatar: string | null;
         gender: number;
         open_id: string | null;
@@ -164,12 +159,17 @@ export declare class UserController {
         language: string;
         province: string;
         type: number;
+        status: number;
         remember_token: string | null;
         active_value: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
         personal_signature: string;
         follow_num: number;
         fans_num: number;
         post_num: number;
         clock_num: number;
+        college_id: bigint | null;
     } | null>;
 }

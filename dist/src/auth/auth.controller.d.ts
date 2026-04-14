@@ -1,5 +1,5 @@
 import { AuthService } from './auth.service';
-declare class WeChatLoginDto {
+export declare class WeChatLoginDto {
     app_id: string;
     code: string;
     iv: string;
@@ -14,4 +14,3 @@ export declare class AuthController {
         data: string;
     }>;
 }
-export {};

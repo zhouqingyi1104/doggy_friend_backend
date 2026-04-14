@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const user_service_1 = require("./user.service");
 const jwt_guard_1 = require("../auth/jwt.guard");
 let UserController = class UserController {
@@ -53,6 +54,8 @@ let UserController = class UserController {
 exports.UserController = UserController;
 __decorate([
     (0, common_1.Get)('personal'),
+    (0, swagger_1.ApiOperation)({ summary: '获取个人/他人资料', description: '如果有 user_id 参数则获取他人的资料，否则获取自己当前的资料' }),
+    (0, swagger_1.ApiQuery)({ name: 'user_id', required: false, description: '目标用户的 ID' }),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Query)('user_id')),
     __metadata("design:type", Function),
@@ -118,6 +121,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "user", null);
 exports.UserController = UserController = __decorate([
+    (0, swagger_1.ApiTags)('用户资料 (User)'),
+    (0, swagger_1.ApiBearerAuth)(),
     (0, common_1.Controller)('api/wechat/user'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [user_service_1.UserService])

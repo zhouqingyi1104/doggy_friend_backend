@@ -1,12 +1,12 @@
-# Agent Instructions
+# Agent Instructions (NestJS Refactoring)
 
 ## Overview
-This repository contains the backend for "Doggy Friend", built with Laravel 5.5 and PHP 7.0+. It heavily integrates with WeChat APIs, Qiniu Cloud Storage, and various AI/Cloud services (Baidu, Alibaba, Tencent).
+This repository contains the backend for "Doggy Friend". It was originally built with Laravel 5.5 but is currently being refactored into a modern 2026 NestJS (Node.js) application.
 
 ## Guidelines for AI Agent
-- **Framework Context:** This is an older Laravel version (5.5). Avoid using features introduced in Laravel 6, 7, 8, 9, 10, or 11.
-- **Service Layer:** The project implements a robust Service layer in `app/Http/Service`. Always encapsulate business logic within these services instead of cluttering controllers.
-- **WeChat Integration:** Use the existing `overtrue/wechat` package and the `WeChatService` for handling WeChat interactions.
-- **API Development:** The project uses `dingo/api` and `tymon/jwt-auth` for API structure and JWT-based authentication.
-- **File Modificaton:** Before modifying controllers, always check if a relevant Service class already exists and handles the domain logic.
-- **Database Operations:** Use Eloquent ORM. Do not write raw SQL unless absolutely necessary for performance reasons.
+- **Framework Context:** You are now working in a NestJS + Prisma environment. 
+- **Legacy Code:** The old Laravel code is preserved in `legacy_laravel/`. Do not edit the legacy code. Use it ONLY as a reference for business logic, database structure, and third-party integrations (WeChat, Baidu AI, QiNiu).
+- **Service Layer:** Maintain the Service-oriented architecture. Controllers should only handle HTTP routing/DTO validation, and pass data to NestJS Services.
+- **Database:** Use Prisma for database interactions. If requested to "check the database schema", look at `prisma/schema.prisma` first. If it's missing there, refer to the old Laravel migrations in `legacy_laravel/database/migrations` or models in `legacy_laravel/app/Models`.
+- **Typing:** Write strict TypeScript.
+- **Package Management:** Use `npm` for package management.

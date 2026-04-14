@@ -1,6 +1,7 @@
-.idea/
-.git/
-vendor/
-node_modules/
-
-storage/
+node_modules
+dist
+legacy_laravel
+.git
+.trae
+*.md
+.env

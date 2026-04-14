@@ -1,6 +1,5 @@
-.idea
-vendor
-storage
-_ide_helper.php
+node_modules
+# Keep environment variables out of version control
 .env
-composer.lock
+
+/generated/prisma

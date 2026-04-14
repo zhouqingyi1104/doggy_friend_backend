@@ -1,0 +1,767 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model access_tokens {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  app_id     BigInt
+  token      String
+  expired_at DateTime  @default(now()) @db.Timestamp(0)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([app_id], map: "access_tokens_app_id_index")
+  @@index([created_at], map: "access_tokens_created_at_index")
+  @@index([expired_at], map: "access_tokens_expired_at_index")
+  @@index([updated_at], map: "access_tokens_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model admin_apps {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  admin_id   BigInt
+  app_id     BigInt
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([app_id], map: "admin_apps_admin_app_id_index")
+  @@index([admin_id], map: "admin_apps_admin_id_index")
+  @@index([created_at], map: "admin_apps_created_at_index")
+  @@index([updated_at], map: "admin_apps_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model admins {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  username       String
+  avatar         String    @default("") @db.VarChar(512)
+  email          String    @unique(map: "admins_email_unique")
+  password       String?
+  mobile         String?
+  active_token   String
+  token_expire   DateTime  @default(now()) @db.Timestamp(0)
+  status         Int       @default(0) @db.TinyInt
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+  remember_token String?
+
+  @@index([created_at], map: "admins_created_at_index")
+  @@index([mobile], map: "admins_mobile_index")
+  @@index([updated_at], map: "admins_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model apps {
+  id           BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  name         String
+  app_key      String
+  app_secret   String
+  alliance_key String
+  domain       String
+  mobile       String
+  college_id   BigInt?
+  status       Int       @default(2) @db.TinyInt
+  created_at   DateTime? @db.Timestamp(0)
+  updated_at   DateTime? @db.Timestamp(0)
+  deleted_at   DateTime? @db.Timestamp(0)
+  service_id   BigInt?
+  attachments  String?   @default("") @db.VarChar(512)
+
+  @@index([alliance_key], map: "apps_alliance_key_index")
+  @@index([app_key], map: "apps_app_key_index")
+  @@index([college_id], map: "apps_college_id_index")
+  @@index([created_at], map: "apps_created_at_index")
+  @@index([updated_at], map: "apps_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model black_list {
+  id         Int       @id @default(autoincrement()) @db.UnsignedInt
+  user_id    BigInt
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([user_id], map: "black_list_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model chat_messages {
+  id           BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  from_user_id BigInt
+  to_user_id   BigInt
+  content      String?   @db.LongText
+  attachments  String?   @db.Text
+  type         Int       @default(1) @db.TinyInt
+  status       Int       @default(1) @db.TinyInt
+  post_at      DateTime? @db.Timestamp(0)
+  read_at      DateTime? @db.Timestamp(0)
+  created_at   DateTime? @db.Timestamp(0)
+  updated_at   DateTime? @db.Timestamp(0)
+  deleted_at   DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "chat_messages_created_at_index")
+  @@index([from_user_id], map: "chat_messages_from_user_id_index")
+  @@index([to_user_id], map: "chat_messages_to_user_id_index")
+  @@index([updated_at], map: "chat_messages_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model colleges {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  name       String    @db.VarChar(255)
+  type       String    @default("无") @db.VarChar(255)
+  properties String    @default("无") @db.VarChar(255)
+  province   String    @default("无") @db.VarChar(255)
+  city       String    @default("无") @db.VarChar(255)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model comments {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  commenter_id   BigInt
+  obj_id         BigInt
+  college_id     BigInt?
+  content        String    @db.LongText
+  attachments    String?   @db.Text
+  ref_comment_id BigInt?
+  obj_type       Int       @default(1) @db.TinyInt
+  type           Int       @default(0) @db.TinyInt
+  status         Int       @default(0) @db.TinyInt
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([commenter_id], map: "comments_commenter_id_index")
+  @@index([created_at], map: "comments_created_at_index")
+  @@index([obj_id], map: "comments_obj_id_index")
+  @@index([updated_at], map: "comments_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model compare_faces {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id        BigInt
+  attachments    String?   @db.Text
+  confidence     Float     @default(0.00)
+  status         Int       @default(1) @db.TinyInt
+  compare_result String?   @db.Text
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "compare_faces_created_at_index")
+  @@index([updated_at], map: "compare_faces_updated_at_index")
+  @@index([user_id], map: "compare_faces_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model employee_part_time_jobs {
+  id               BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  part_time_job_id BigInt
+  user_id          BigInt
+  status           Int       @default(1) @db.TinyInt
+  score            Int       @default(0) @db.TinyInt
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+  deleted_at       DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "employee_part_time_jobs_created_at_index")
+  @@index([part_time_job_id], map: "employee_part_time_jobs_part_time_job_id_index")
+  @@index([updated_at], map: "employee_part_time_jobs_updated_at_index")
+  @@index([user_id], map: "employee_part_time_jobs_user_id_index")
+}
+
+model failed_jobs {
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  connection String   @db.Text
+  queue      String   @db.Text
+  payload    String   @db.LongText
+  exception  String   @db.LongText
+  failed_at  DateTime @default(now()) @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model follows {
+  id                 BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id            BigInt
+  obj_id             BigInt
+  obj_type           Int       @default(1) @db.TinyInt
+  status             Int       @default(1) @db.TinyInt
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+  deleted_at         DateTime? @db.Timestamp(0)
+  follow_nickname    String    @default("") @db.VarChar(128)
+  follow_avatar      String    @default("") @db.VarChar(512)
+  be_follow_nickname String    @default("") @db.VarChar(128)
+  be_follow_avatar   String    @default("") @db.VarChar(512)
+
+  @@index([created_at], map: "follows_created_at_index")
+  @@index([obj_id], map: "follows_obj_id_index")
+  @@index([updated_at], map: "follows_updated_at_index")
+  @@index([user_id], map: "follows_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model form_ids {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt
+  form_id    String
+  open_id    String
+  expired_at DateTime? @db.Timestamp(0)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "form_ids_created_at_index")
+  @@index([expired_at], map: "form_ids_expired_at_index")
+  @@index([open_id], map: "form_ids_open_id_index")
+  @@index([updated_at], map: "form_ids_updated_at_index")
+  @@index([user_id], map: "form_ids_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model friends {
+  id              BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id         BigInt
+  friend_id       BigInt
+  nickname        String?
+  type            Int       @default(1) @db.TinyInt
+  status          Int       @default(1) @db.TinyInt
+  friend_group_id BigInt?
+  created_at      DateTime? @db.Timestamp(0)
+  updated_at      DateTime? @db.Timestamp(0)
+  deleted_at      DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "friends_created_at_index")
+  @@index([friend_id], map: "friends_friend_id_index")
+  @@index([updated_at], map: "friends_updated_at_index")
+  @@index([user_id], map: "friends_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model inboxes {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  from_id     BigInt
+  to_id       BigInt
+  content     String    @db.VarChar(1024)
+  obj_id      BigInt
+  obj_type    Int       @db.TinyInt
+  action_type Int       @db.TinyInt
+  post_at     DateTime? @db.Timestamp(0)
+  read_at     DateTime? @db.Timestamp(0)
+  private     Boolean
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "inboxes_created_at_index")
+  @@index([from_id], map: "inboxes_from_id_index")
+  @@index([obj_id], map: "inboxes_obj_id_index")
+  @@index([to_id], map: "inboxes_to_id_index")
+  @@index([updated_at], map: "inboxes_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model location {
+  id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  latitude  String   @default("")
+  longitude String   @default("")
+  create_at DateTime @default(now()) @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model match_loves {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  owner_id       BigInt
+  college_id     BigInt?
+  user_name      String
+  match_name     String
+  content        String?   @db.LongText
+  attachments    String?   @db.Text
+  private        Int       @default(1) @db.TinyInt
+  is_password    Int       @db.TinyInt
+  password       String?
+  type           Int       @default(1) @db.TinyInt
+  status         Int       @db.TinyInt
+  comment_number Int       @default(0)
+  praise_number  Int       @default(0)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([college_id], map: "match_loves_college_id_index")
+  @@index([created_at], map: "match_loves_created_at_index")
+  @@index([owner_id], map: "match_loves_owner_id_index")
+  @@index([updated_at], map: "match_loves_updated_at_index")
+  @@index([user_name], map: "match_loves_user_name_index")
+  @@index([match_name], map: "被匹配人的名字")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model message_sessions {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id       BigInt
+  post_phone    String?
+  receive_phone String
+  obj_type      Int       @db.TinyInt
+  obj_id        BigInt
+  created_at    DateTime? @db.Timestamp(0)
+  updated_at    DateTime? @db.Timestamp(0)
+  deleted_at    DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "message_sessions_created_at_index")
+  @@index([obj_id], map: "message_sessions_obj_id_index")
+  @@index([post_phone], map: "message_sessions_post_phone_index")
+  @@index([receive_phone], map: "message_sessions_receive_phone_index")
+  @@index([user_id], map: "message_sessions_user_id_index")
+}
+
+model migrations {
+  id        Int    @id @default(autoincrement()) @db.UnsignedInt
+  migration String
+  batch     Int
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model part_time_jobs {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id     BigInt
+  title       String    @default("")
+  content     String?   @db.LongText
+  attachments String    @db.Text
+  salary      Float     @default(0.00)
+  status      Int       @default(1) @db.TinyInt
+  type        Int       @default(1) @db.TinyInt
+  end_at      DateTime? @db.Timestamp(0)
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "part_time_jobs_created_at_index")
+  @@index([end_at], map: "part_time_jobs_end_at_index")
+  @@index([updated_at], map: "part_time_jobs_updated_at_index")
+  @@index([user_id], map: "part_time_jobs_user_id_index")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model password_resets {
+  email      String
+  token      String
+  created_at DateTime? @db.Timestamp(0)
+
+  @@index([email], map: "password_resets_email_index")
+  @@ignore
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model posts {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  poster_id      Int
+  college_id     Int?
+  content        String?   @db.Text
+  attachments    String?   @db.Text
+  topic          String    @default("无") @db.VarChar(1024)
+  type           Int       @default(0) @db.TinyInt
+  status         Int       @default(0) @db.TinyInt
+  private        Boolean
+  comment_number Int       @default(0)
+  praise_number  Int       @default(0)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+  mobile         String?   @db.VarChar(120)
+  new_column     Int?
+
+  @@index([college_id], map: "posts_college_id_index")
+  @@index([created_at], map: "posts_created_at_index")
+  @@index([poster_id], map: "posts_poster_id_index")
+  @@index([updated_at], map: "posts_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model praises {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  owner_id   BigInt
+  obj_id     BigInt
+  obj_type   Int       @default(0) @db.TinyInt
+  college_id BigInt?
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "praises_created_at_index")
+  @@index([obj_id], map: "praises_obj_id_index")
+  @@index([owner_id], map: "praises_owner_id_index")
+  @@index([updated_at], map: "praises_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model qiniu_tokens {
+  id         Int       @id @default(autoincrement()) @db.UnsignedInt
+  token      String    @default("") @db.VarChar(1024)
+  expired_at DateTime  @default(now()) @db.Timestamp(0)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "qiniu_tokens_created_at_index")
+  @@index([expired_at], map: "qiniu_tokens_expired_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model run_steps {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt
+  status     Int       @default(1) @db.TinyInt
+  type       Int       @default(1) @db.TinyInt
+  step       BigInt    @default(0)
+  run_at     DateTime? @db.Timestamp(0)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "run_steps_created_at_index")
+  @@index([run_at], map: "run_steps_run_at_index")
+  @@index([updated_at], map: "run_steps_updated_at_index")
+  @@index([user_id], map: "run_steps_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model sale_friends {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  owner_id       BigInt
+  college_id     BigInt?
+  name           String
+  gender         Int       @default(1) @db.TinyInt
+  major          String?
+  expectation    String    @db.VarChar(1024)
+  introduce      String    @db.LongText
+  attachments    String?   @db.Text
+  comment_number Int       @default(0)
+  praise_number  Int       @default(0)
+  type           Int       @default(1) @db.TinyInt
+  status         Int       @default(1) @db.TinyInt
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([college_id], map: "sale_friends_college_id_index")
+  @@index([created_at], map: "sale_friends_created_at_index")
+  @@index([name], map: "sale_friends_name_index")
+  @@index([owner_id], map: "sale_friends_owner_id_index")
+  @@index([updated_at], map: "sale_friends_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model secret_messages {
+  id                 BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  post_user_id       BigInt
+  receive_user_id    BigInt?
+  message_session_id BigInt
+  number             String    @default("0000")
+  code               String
+  content            String?   @db.LongText
+  attachments        String?   @db.Text
+  status             Int       @default(1) @db.TinyInt
+  delay_at           DateTime? @db.Timestamp(0)
+  send_at            DateTime? @db.Timestamp(0)
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+  deleted_at         DateTime? @db.Timestamp(0)
+
+  @@index([code], map: "secret_messages_code_index")
+  @@index([created_at], map: "secret_messages_created_at_index")
+  @@index([delay_at], map: "secret_messages_delay_at_index")
+  @@index([message_session_id], map: "secret_messages_message_session_id_index")
+  @@index([number], map: "secret_messages_number_index")
+  @@index([post_user_id], map: "secret_messages_post_user_id_index")
+  @@index([receive_user_id], map: "secret_messages_receive_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model secret_messages_visit_logs {
+  id                BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  nickname          String?
+  user_id           BigInt
+  secret_message_id BigInt
+  created_at        DateTime? @db.Timestamp(0)
+  updated_at        DateTime? @db.Timestamp(0)
+  deleted_at        DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "secret_messages_visit_logs_created_at_index")
+  @@index([secret_message_id], map: "secret_messages_visit_logs_secret_message_id_index")
+  @@index([updated_at], map: "secret_messages_visit_logs_updated_at_index")
+  @@index([user_id], map: "secret_messages_visit_logs_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model send_messages {
+  id                 BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  mobile             String
+  message_session_id BigInt?
+  code               String    @default("")
+  type               Int       @default(1) @db.TinyInt
+  status             Int       @default(1) @db.TinyInt
+  expired_at         DateTime? @db.Timestamp(0)
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+  deleted_at         DateTime? @db.Timestamp(0)
+
+  @@index([code], map: "send_messages_code_index")
+  @@index([created_at], map: "send_messages_created_at_index")
+  @@index([expired_at], map: "send_messages_expired_at_index")
+  @@index([message_session_id], map: "send_messages_message_session_id_index")
+  @@index([mobile], map: "send_messages_mobile_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model template_key_words {
+  id          Int       @id @default(autoincrement()) @db.UnsignedInt
+  keyword     String    @db.VarChar(128)
+  title       String
+  content     String?
+  keyword_ids String    @db.Text
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "template_key_words_created_at_index")
+  @@index([updated_at], map: "template_key_words_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model template_logs {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  app_id      BigInt
+  open_id     String
+  template_id String
+  content     String    @db.Text
+  result      String    @db.Text
+  page        String    @default("")
+  status      Int       @default(1) @db.TinyInt
+  type        Int       @default(1) @db.TinyInt
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "template_logs_created_at_index")
+  @@index([updated_at], map: "template_logs_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model templates {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  app_id      BigInt
+  template_id String
+  title       String
+  content     String?   @db.Text
+  keyword_ids String    @db.Text
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  @@index([app_id], map: "templates_app_id_index")
+  @@index([created_at], map: "templates_created_at_index")
+  @@index([updated_at], map: "templates_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model topics {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id        BigInt
+  app_id         Int
+  user_type      Int       @default(1) @db.TinyInt
+  title          String?
+  content        String?   @db.LongText
+  attachments    String?   @db.Text
+  praise_number  BigInt    @default(0)
+  view_number    BigInt    @default(0)
+  comment_number BigInt    @default(1)
+  status         Int       @default(1) @db.TinyInt
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "topics_created_at_index")
+  @@index([updated_at], map: "topics_updated_at_index")
+  @@index([user_id], map: "topics_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model travel_log_pois {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  travel_log_id BigInt
+  title         String    @default("")
+  address       String    @default("")
+  type          Int       @default(1) @db.TinyInt
+  created_at    DateTime? @db.Timestamp(0)
+  updated_at    DateTime? @db.Timestamp(0)
+  deleted_at    DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "travel_log_pois_created_at_index")
+  @@index([travel_log_id], map: "travel_log_pois_travel_log_id_index")
+  @@index([updated_at], map: "travel_log_pois_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model travel_logs {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  travel_plan_id BigInt
+  user_id        BigInt
+  name           String    @default("")
+  address        String    @default("")
+  province       String?   @default("")
+  city           String?   @default("")
+  district       String?   @default("")
+  point_id       BigInt?
+  length         Float     @default(0.00)
+  total_length   Float     @default(0.00)
+  distance       Float     @default(0.00)
+  step           Float     @default(0.00)
+  latitude       String    @default("")
+  longitude      String    @default("")
+  run_at         DateTime? @db.Timestamp(0)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "travel_logs_created_at_index")
+  @@index([run_at], map: "travel_logs_run_at_index")
+  @@index([travel_plan_id], map: "travel_logs_travel_plan_id_index")
+  @@index([updated_at], map: "travel_logs_updated_at_index")
+  @@index([user_id], map: "travel_logs_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model travel_plan_points {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  travel_plan_id BigInt
+  name           String    @default("")
+  address        String    @default("1")
+  latitude       String    @default("")
+  longitude      String    @default("")
+  sort           Int       @default(0)
+  type           Int       @default(1) @db.TinyInt
+  status         Int       @default(1) @db.TinyInt
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "travel_plan_points_created_at_index")
+  @@index([travel_plan_id], map: "travel_plan_points_travel_plan_id_index")
+  @@index([updated_at], map: "travel_plan_points_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model travel_plans {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt
+  title      String    @default("")
+  distance   BigInt
+  status     Int       @default(1) @db.TinyInt
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "travel_plans_created_at_index")
+  @@index([updated_at], map: "travel_plans_updated_at_index")
+  @@index([user_id], map: "travel_plans_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user_profiles {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id        BigInt
+  nickname       String    @default("")
+  avatar         String    @default("")
+  name           String    @default("") @db.VarChar(128)
+  student_number String    @default("")
+  grade          Int       @db.TinyInt
+  major          String    @default("")
+  college        String    @default("")
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+  deleted_at     DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "user_profiles_created_at_index")
+  @@index([updated_at], map: "user_profiles_updated_at_index")
+  @@index([user_id], map: "user_profiles_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model user_visit_logs {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  nickname   String?
+  user_id    BigInt
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  deleted_at DateTime? @db.Timestamp(0)
+
+  @@index([created_at], map: "user_visit_logs_created_at_index")
+  @@index([updated_at], map: "user_visit_logs_updated_at_index")
+  @@index([user_id], map: "user_visit_logs_user_id_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model users {
+  id                 BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  app_id             BigInt
+  nickname           String?
+  password           String?
+  mobile             String?
+  avatar             String?
+  gender             Int       @default(0) @db.TinyInt
+  open_id            String?
+  union_id           String?
+  city               String    @default("无")
+  country            String    @default("无")
+  language           String    @default("zh_CN")
+  province           String    @default("无")
+  type               Int       @default(0) @db.TinyInt
+  status             Int       @default(0) @db.TinyInt
+  remember_token     String?   @db.VarChar(100)
+  active_value       Int       @default(0)
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+  deleted_at         DateTime? @db.Timestamp(0)
+  personal_signature String    @default("你在路上随便碰到的一个路人，都是别人做梦都想见到的那人") @db.VarChar(512)
+  follow_num         Int       @default(0)
+  fans_num           Int       @default(0)
+  post_num           Int       @default(0)
+  clock_num          Int       @default(0)
+
+  @@index([app_id], map: "users_app_id_index")
+  @@index([created_at], map: "users_created_at_index")
+  @@index([mobile], map: "users_mobile_index")
+  @@index([open_id], map: "users_open_id_index")
+  @@index([union_id], map: "users_union_id_index")
+  @@index([updated_at], map: "users_updated_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model videos {
+  id           BigInt    @id @default(autoincrement())
+  v_id         String    @default("") @db.VarChar(225)
+  app_id       BigInt
+  attachments  String?   @db.Text
+  title        String?   @default("") @db.VarChar(128)
+  sort         Int       @default(1)
+  introduction String?   @default("")
+  created_at   DateTime? @db.Timestamp(0)
+  updated_at   DateTime? @db.Timestamp(0)
+  deleted_at   DateTime? @db.Timestamp(0)
+
+  @@index([app_id], map: "videos_app_id_index")
+}

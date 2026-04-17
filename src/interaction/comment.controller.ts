@@ -2,12 +2,12 @@ import { Controller, Get, Post, Body, Req, Query, Param, UseGuards } from '@nest
 import { CommentService } from './comment.service';
 import { JwtAuthGuard } from '../auth/jwt.guard';
 
-@Controller('api/wechat/comment')
+@Controller('api/wechat')
 @UseGuards(JwtAuthGuard)
 export class CommentController {
   constructor(private readonly commentService: CommentService) {}
 
-  @Post()
+  @Post('comment')
   async store(
     @Req() req,
     @Body() body: {
@@ -31,7 +31,7 @@ export class CommentController {
     );
   }
 
-  @Get('list')
+  @Get('comment')
   async list(@Query() query: any) {
     const objId = BigInt(query.obj_id);
     const objType = parseInt(query.type, 10) || 1;

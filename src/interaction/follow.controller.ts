@@ -19,7 +19,7 @@ export class FollowController {
     );
   }
 
-  @Post('check')
+  @Post('follow/check')
   async checkFollow(
     @Req() req,
     @Body() body: { obj_id: string; obj_type: number }

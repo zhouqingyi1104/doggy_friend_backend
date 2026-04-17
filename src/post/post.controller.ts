@@ -1,13 +1,13 @@
-import { Controller, Get, Post, Body, Req, Param, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Body, Req, Param, Query, UseGuards } from '@nestjs/common';
 import { PostService } from './post.service';
 import { JwtAuthGuard } from '../auth/jwt.guard';
 
-@Controller('api/wechat/post')
+@Controller('api/wechat')
 @UseGuards(JwtAuthGuard)
 export class PostController {
   constructor(private readonly postService: PostService) {}
 
-  @Post()
+  @Post('post')
   async store(
     @Req() req,
     @Body() body: {
@@ -37,7 +37,7 @@ export class PostController {
     return result;
   }
 
-  @Get()
+  @Get('post')
   async postListLegacy(@Req() req, @Query() query: any) {
     const user = req.user;
     
@@ -60,7 +60,7 @@ export class PostController {
     );
   }
 
-  @Get('list')
+  @Get('post/list')
   async postList(@Req() req, @Query() query: any) {
     const user = req.user;
     
@@ -83,8 +83,14 @@ export class PostController {
     );
   }
 
-  @Get(':id')
+  @Get('post/:id')
   async detail(@Req() req, @Param('id') id: string) {
     return this.postService.getPostDetail(BigInt(id), req.user.id);
+  }
+
+  @Delete('delete/:id/post')
+  async destroy(@Req() req, @Param('id') id: string) {
+    // Mock delete endpoint logic
+    return { error_code: 0, data: 1 };
   }
 }

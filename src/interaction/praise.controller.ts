@@ -2,12 +2,12 @@ import { Controller, Post, Body, Req, UseGuards } from '@nestjs/common';
 import { PraiseService } from './praise.service';
 import { JwtAuthGuard } from '../auth/jwt.guard';
 
-@Controller('api/wechat/praise')
+@Controller('api/wechat')
 @UseGuards(JwtAuthGuard)
 export class PraiseController {
   constructor(private readonly praiseService: PraiseService) {}
 
-  @Post()
+  @Post('praise')
   async store(
     @Req() req,
     @Body() body: { obj_id: string; obj_type: number }

@@ -15,6 +15,12 @@ const user_module_1 = require("./user/user.module");
 const post_module_1 = require("./post/post.module");
 const interaction_module_1 = require("./interaction/interaction.module");
 const qiniu_module_1 = require("./qiniu/qiniu.module");
+const chat_module_1 = require("./chat/chat.module");
+const sale_friend_module_1 = require("./sale-friend/sale-friend.module");
+const match_love_module_1 = require("./match-love/match-love.module");
+const compare_face_module_1 = require("./compare-face/compare-face.module");
+const travel_module_1 = require("./travel/travel.module");
+const job_module_1 = require("./job/job.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -28,6 +34,12 @@ exports.AppModule = AppModule = __decorate([
             post_module_1.PostModule,
             interaction_module_1.InteractionModule,
             qiniu_module_1.QiniuModule,
+            chat_module_1.ChatModule,
+            sale_friend_module_1.SaleFriendModule,
+            match_love_module_1.MatchLoveModule,
+            compare_face_module_1.CompareFaceModule,
+            travel_module_1.TravelModule,
+            job_module_1.JobModule,
         ],
         controllers: [],
         providers: [],

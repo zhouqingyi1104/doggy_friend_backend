@@ -2,6 +2,10 @@ import { UserService } from './user.service';
 export declare class UserController {
     private readonly userService;
     constructor(userService: UserService);
+    checkLogin(): Promise<{
+        error_code: number;
+        data: string;
+    }>;
     personal(req: any, queryUserId: string): Promise<{
         id: bigint;
         mobile: string | null;
@@ -92,7 +96,7 @@ export declare class UserController {
         post_num: number;
         clock_num: number;
     }>;
-    updateUser(req: any, body: {
+    updateSignature(req: any, body: {
         nickname: string;
         avatar: string;
     }): Promise<{
@@ -122,6 +126,10 @@ export declare class UserController {
         fans_num: number;
         post_num: number;
         clock_num: number;
+    }>;
+    service(): Promise<{
+        error_code: number;
+        data: number;
     }>;
     createProfile(req: any, body: {
         mobile: string;
@@ -172,4 +180,10 @@ export declare class UserController {
         post_num: number;
         clock_num: number;
     } | null>;
+    saleFriendsV2(): Promise<{
+        error_code: number;
+        data: {
+            page_data: never[];
+        };
+    }>;
 }

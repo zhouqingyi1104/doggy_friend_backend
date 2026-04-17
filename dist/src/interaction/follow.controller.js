@@ -27,10 +27,19 @@ let FollowController = class FollowController {
     async checkFollow(req, body) {
         return this.followService.checkFollow(req.user.id, BigInt(body.obj_id), body.obj_type || 1);
     }
+    async checkFollowUser(req, objId) {
+        return this.followService.checkFollow(req.user.id, BigInt(objId), 1);
+    }
+    async followUser(req, body) {
+        return this.followService.toggleFollow(req.user.id, BigInt(body.obj_id), 1);
+    }
+    async cancelFollow(id, type) {
+        return { error_code: 0, data: null };
+    }
 };
 exports.FollowController = FollowController;
 __decorate([
-    (0, common_1.Post)(),
+    (0, common_1.Post)('follow'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -38,15 +47,39 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], FollowController.prototype, "toggleFollow", null);
 __decorate([
-    (0, common_1.Post)('check'),
+    (0, common_1.Post)('follow/check'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], FollowController.prototype, "checkFollow", null);
+__decorate([
+    (0, common_1.Get)('follow/user'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Query)('obj_id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:returntype", Promise)
+], FollowController.prototype, "checkFollowUser", null);
+__decorate([
+    (0, common_1.Post)('follow_user'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], FollowController.prototype, "followUser", null);
+__decorate([
+    (0, common_1.Put)('cancel/:id/follow/:type'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Param)('type')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", Promise)
+], FollowController.prototype, "cancelFollow", null);
 exports.FollowController = FollowController = __decorate([
-    (0, common_1.Controller)('api/wechat/follow'),
+    (0, common_1.Controller)('api/wechat'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [follow_service_1.FollowService])
 ], FollowController);

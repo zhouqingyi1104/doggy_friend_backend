@@ -7,13 +7,17 @@ const core_1 = require("@nestjs/core");
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
 const app_module_1 = require("./app.module");
+const transform_interceptor_1 = require("./common/transform.interceptor");
+const logger_1 = require("./common/logger");
 const helmet_1 = __importDefault(require("helmet"));
 const express_rate_limit_1 = __importDefault(require("express-rate-limit"));
 BigInt.prototype.toJSON = function () {
     return this.toString();
 };
 async function bootstrap() {
-    const app = await core_1.NestFactory.create(app_module_1.AppModule);
+    const app = await core_1.NestFactory.create(app_module_1.AppModule, {
+        logger: logger_1.winstonLogger,
+    });
     app.set('trust proxy', 1);
     app.use((0, helmet_1.default)());
     app.use((0, express_rate_limit_1.default)({
@@ -26,6 +30,7 @@ async function bootstrap() {
         whitelist: true,
         transform: true,
     }));
+    app.useGlobalInterceptors(new transform_interceptor_1.TransformInterceptor());
     const config = new swagger_1.DocumentBuilder()
         .setTitle('Doggy Friend Backend API')
         .setDescription('The API documentation for WeChat Mini Program')

@@ -1,0 +1,140 @@
+import { SaleFriendService } from './sale-friend.service';
+import { CreateSaleFriendDto } from './dto/create-sale-friend.dto';
+export declare class SaleFriendController {
+    private readonly saleFriendService;
+    constructor(saleFriendService: SaleFriendService);
+    save(req: any, body: CreateSaleFriendDto): Promise<{
+        id: bigint;
+        name: string;
+        college_id: bigint | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        attachments: string | null;
+        gender: number;
+        type: number;
+        major: string | null;
+        comment_number: number;
+        praise_number: number;
+        owner_id: bigint;
+        expectation: string;
+        introduce: string;
+    }>;
+    saleFriends(req: any, query: any): Promise<{
+        page_data: {
+            users: undefined;
+            poster: {
+                id: bigint;
+                nickname: string | null;
+                avatar: string | null;
+                gender: number;
+            };
+            has_praise: boolean;
+            attachments: string[];
+            id: bigint;
+            name: string;
+            college_id: bigint | null;
+            status: number;
+            created_at: Date | null;
+            updated_at: Date | null;
+            deleted_at: Date | null;
+            gender: number;
+            type: number;
+            major: string | null;
+            comment_number: number;
+            praise_number: number;
+            owner_id: bigint;
+            expectation: string;
+            introduce: string;
+        }[];
+        total: number;
+        page: number;
+        pageSize: number;
+        last_page: number;
+    }>;
+    saleFriendsV2(req: any, query: any): Promise<{
+        page_data: {
+            users: undefined;
+            poster: {
+                id: bigint;
+                nickname: string | null;
+                avatar: string | null;
+                gender: number;
+            };
+            has_praise: boolean;
+            attachments: string[];
+            id: bigint;
+            name: string;
+            college_id: bigint | null;
+            status: number;
+            created_at: Date | null;
+            updated_at: Date | null;
+            deleted_at: Date | null;
+            gender: number;
+            type: number;
+            major: string | null;
+            comment_number: number;
+            praise_number: number;
+            owner_id: bigint;
+            expectation: string;
+            introduce: string;
+        }[];
+        total: number;
+        page: number;
+        pageSize: number;
+        last_page: number;
+    }>;
+    detail(req: any, id: string): Promise<{
+        users: undefined;
+        poster: {
+            id: bigint;
+            nickname: string | null;
+            avatar: string | null;
+            gender: number;
+        };
+        has_praise: boolean;
+        attachments: string[];
+        id: bigint;
+        name: string;
+        college_id: bigint | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        gender: number;
+        type: number;
+        major: string | null;
+        comment_number: number;
+        praise_number: number;
+        owner_id: bigint;
+        expectation: string;
+        introduce: string;
+    }>;
+    mostNewSaleFriends(req: any): Promise<{
+        users: undefined;
+        poster: {
+            id: bigint;
+            nickname: string | null;
+            avatar: string | null;
+            gender: number;
+        };
+        attachments: string[];
+        id: bigint;
+        name: string;
+        college_id: bigint | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        gender: number;
+        type: number;
+        major: string | null;
+        comment_number: number;
+        praise_number: number;
+        owner_id: bigint;
+        expectation: string;
+        introduce: string;
+    }[]>;
+    destroy(req: any, id: string): Promise<number>;
+}

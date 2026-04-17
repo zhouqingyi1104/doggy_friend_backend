@@ -14,4 +14,16 @@ export declare class FollowController {
     }): Promise<{
         has_follow: boolean;
     }>;
+    checkFollowUser(req: any, objId: string): Promise<{
+        has_follow: boolean;
+    }>;
+    followUser(req: any, body: {
+        obj_id: string;
+    }): Promise<{
+        status: number;
+    }>;
+    cancelFollow(id: string, type: string): Promise<{
+        error_code: number;
+        data: null;
+    }>;
 }

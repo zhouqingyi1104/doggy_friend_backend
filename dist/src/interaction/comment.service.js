@@ -110,7 +110,7 @@ let CommentService = class CommentService {
             };
         });
         return {
-            data: formatted,
+            page_data: formatted,
             total,
             page: pageNumber,
             pageSize,

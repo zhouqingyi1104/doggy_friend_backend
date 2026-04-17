@@ -1,15 +1,9 @@
 import { PostService } from './post.service';
+import { CreatePostDto } from './dto/create-post.dto';
 export declare class PostController {
     private readonly postService;
     constructor(postService: PostService);
-    store(req: any, body: {
-        content: string;
-        attachments: string;
-        location: string;
-        private: number;
-        username: string;
-        mobile: string;
-    }): Promise<{
+    store(req: any, body: CreatePostDto): Promise<{
         id: bigint;
         college_id: bigint | null;
         status: number;
@@ -25,7 +19,7 @@ export declare class PostController {
         poster_id: bigint;
     }>;
     postListLegacy(req: any, query: any): Promise<{
-        data: {
+        page_data: {
             users: undefined;
             poster: {
                 id: bigint;
@@ -59,7 +53,7 @@ export declare class PostController {
         last_page: number;
     }>;
     postList(req: any, query: any): Promise<{
-        data: {
+        page_data: {
             users: undefined;
             poster: {
                 id: bigint;
@@ -92,5 +86,23 @@ export declare class PostController {
         pageSize: number;
         last_page: number;
     }>;
+    mostNewPost(): Promise<{
+        error_code: number;
+        data: {
+            page_data: never[];
+        };
+    }>;
+    topic(): Promise<{
+        error_code: number;
+        data: null;
+    }>;
+    praiseTopic(id: string): Promise<{
+        error_code: number;
+        data: null;
+    }>;
     detail(req: any, id: string): Promise<any>;
+    destroy(req: any, id: string): Promise<{
+        error_code: number;
+        data: number;
+    }>;
 }

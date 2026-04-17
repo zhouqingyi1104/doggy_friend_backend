@@ -18,7 +18,7 @@ export declare class PostService {
         poster_id: bigint;
     }>;
     getPostList(appId: bigint, currentUserId: bigint, pageSize?: number, pageNumber?: number, type?: number, justMe?: boolean, filter?: string, targetUserId?: bigint): Promise<{
-        data: {
+        page_data: {
             users: undefined;
             poster: {
                 id: bigint;

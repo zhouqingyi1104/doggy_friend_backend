@@ -3,6 +3,8 @@ import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import { TransformInterceptor } from './common/transform.interceptor';
+import { winstonLogger } from './common/logger';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
@@ -13,7 +15,9 @@ import rateLimit from 'express-rate-limit';
 
 async function bootstrap() {
   // Use NestExpressApplication to configure proxy
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    logger: winstonLogger,
+  });
   
   // ⚠️ API Tester Review Fix: Trust Proxy
   // Since CloudBase / CloudRun uses a load balancer, we must trust the proxy 
@@ -40,6 +44,9 @@ async function bootstrap() {
       transform: true,
     }),
   );
+
+  // Enable global response transform interceptor
+  app.useGlobalInterceptors(new TransformInterceptor());
 
   // Swagger API Documentation Setup
   const config = new DocumentBuilder()

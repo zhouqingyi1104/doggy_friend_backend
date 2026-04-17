@@ -6,6 +6,12 @@ import { UserModule } from './user/user.module';
 import { PostModule } from './post/post.module';
 import { InteractionModule } from './interaction/interaction.module';
 import { QiniuModule } from './qiniu/qiniu.module';
+import { ChatModule } from './chat/chat.module';
+import { SaleFriendModule } from './sale-friend/sale-friend.module';
+import { MatchLoveModule } from './match-love/match-love.module';
+import { CompareFaceModule } from './compare-face/compare-face.module';
+import { TravelModule } from './travel/travel.module';
+import { JobModule } from './job/job.module';
 
 @Module({
   imports: [
@@ -16,6 +22,12 @@ import { QiniuModule } from './qiniu/qiniu.module';
     PostModule,
     InteractionModule,
     QiniuModule,
+    ChatModule,
+    SaleFriendModule,
+    MatchLoveModule,
+    CompareFaceModule,
+    TravelModule,
+    JobModule,
   ],
   controllers: [],
   providers: [],

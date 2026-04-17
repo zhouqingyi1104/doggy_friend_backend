@@ -20,7 +20,7 @@ export class UserController {
   @ApiOperation({ summary: '获取个人/他人资料', description: '如果有 user_id 参数则获取他人的资料，否则获取自己当前的资料' })
   @ApiQuery({ name: 'user_id', required: false, description: '目标用户的 ID' })
   async personal(@Req() req, @Query('user_id') queryUserId: string) {
-    const userId = queryUserId ? BigInt(queryUserId) : req.user.id;
+    const userId = queryUserId && queryUserId !== 'undefined' ? BigInt(queryUserId) : req.user.id;
     return this.userService.getUser(userId);
   }
 
@@ -55,21 +55,6 @@ export class UserController {
     return this.userService.updateUser(req.user.id, body.nickname, body.avatar);
   }
 
-  @Get('run_statistic')
-  async runStatistic() {
-    return { error_code: 0, data: { today_step: 0, total_step: 0 } };
-  }
-
-  @Get('my_rank')
-  async myRank() {
-    return { error_code: 0, data: { rank: 1 } };
-  }
-
-  @Get('new_messages')
-  async newMessages() {
-    return { error_code: 0, data: 0 };
-  }
-
   @Get('service')
   async service() {
     return { error_code: 0, data: 1 };
@@ -98,8 +83,14 @@ export class UserController {
     );
   }
 
-  @Get(':id')
+  @Get('user/:id')
   async user(@Param('id') id: string) {
     return this.userService.getUser(BigInt(id));
+  }
+
+  // Mock for sale_friends_v2 since it's not implemented yet
+  @Get('sale_friends_v2')
+  async saleFriendsV2() {
+    return { error_code: 0, data: { page_data: [] } };
   }
 }

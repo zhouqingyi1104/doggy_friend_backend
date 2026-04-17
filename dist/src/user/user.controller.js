@@ -22,8 +22,11 @@ let UserController = class UserController {
     constructor(userService) {
         this.userService = userService;
     }
+    async checkLogin() {
+        return { error_code: 0, data: '' };
+    }
     async personal(req, queryUserId) {
-        const userId = queryUserId ? BigInt(queryUserId) : req.user.id;
+        const userId = queryUserId && queryUserId !== 'undefined' ? BigInt(queryUserId) : req.user.id;
         return this.userService.getUser(userId);
     }
     async school(req) {
@@ -41,8 +44,11 @@ let UserController = class UserController {
     async clearSchool(req) {
         return this.userService.clearSchool(req.user.id);
     }
-    async updateUser(req, body) {
+    async updateSignature(req, body) {
         return this.userService.updateUser(req.user.id, body.nickname, body.avatar);
+    }
+    async service() {
+        return { error_code: 0, data: 1 };
     }
     async createProfile(req, body) {
         return this.userService.createOrUpdateProfile(req.user.id, body.mobile, body.username, body.grade, body.major, body.student_number, body.college);
@@ -50,10 +56,20 @@ let UserController = class UserController {
     async user(id) {
         return this.userService.getUser(BigInt(id));
     }
+    async saleFriendsV2() {
+        return { error_code: 0, data: { page_data: [] } };
+    }
 };
 exports.UserController = UserController;
 __decorate([
-    (0, common_1.Get)('personal'),
+    (0, common_1.Post)('check_login'),
+    (0, swagger_1.ApiOperation)({ summary: '检测登录路由' }),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "checkLogin", null);
+__decorate([
+    (0, common_1.Get)('personal_info'),
     (0, swagger_1.ApiOperation)({ summary: '获取个人/他人资料', description: '如果有 user_id 参数则获取他人的资料，否则获取自己当前的资料' }),
     (0, swagger_1.ApiQuery)({ name: 'user_id', required: false, description: '目标用户的 ID' }),
     __param(0, (0, common_1.Req)()),
@@ -70,13 +86,13 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "school", null);
 __decorate([
-    (0, common_1.Get)('recommend/school'),
+    (0, common_1.Get)('recommend_school'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "recommendSchool", null);
 __decorate([
-    (0, common_1.Post)('set/college/:id'),
+    (0, common_1.Put)('set/:id/college'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
@@ -84,27 +100,33 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "setCollege", null);
 __decorate([
-    (0, common_1.Get)('search/college'),
+    (0, common_1.Get)('search_college'),
     __param(0, (0, common_1.Query)('college')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "searchCollege", null);
 __decorate([
-    (0, common_1.Post)('clear/school'),
+    (0, common_1.Put)('clear_school'),
     __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "clearSchool", null);
 __decorate([
-    (0, common_1.Post)('update'),
+    (0, common_1.Post)('user/update/signature'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
-], UserController.prototype, "updateUser", null);
+], UserController.prototype, "updateSignature", null);
+__decorate([
+    (0, common_1.Get)('service'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "service", null);
 __decorate([
     (0, common_1.Post)('profile'),
     __param(0, (0, common_1.Req)()),
@@ -114,16 +136,22 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "createProfile", null);
 __decorate([
-    (0, common_1.Get)(':id'),
+    (0, common_1.Get)('user/:id'),
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "user", null);
+__decorate([
+    (0, common_1.Get)('sale_friends_v2'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "saleFriendsV2", null);
 exports.UserController = UserController = __decorate([
     (0, swagger_1.ApiTags)('用户资料 (User)'),
     (0, swagger_1.ApiBearerAuth)(),
-    (0, common_1.Controller)('api/wechat/user'),
+    (0, common_1.Controller)('api/wechat'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], UserController);

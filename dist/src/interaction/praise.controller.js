@@ -29,7 +29,7 @@ let PraiseController = class PraiseController {
 };
 exports.PraiseController = PraiseController;
 __decorate([
-    (0, common_1.Post)(),
+    (0, common_1.Post)('praise'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -37,7 +37,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PraiseController.prototype, "store", null);
 exports.PraiseController = PraiseController = __decorate([
-    (0, common_1.Controller)('api/wechat/praise'),
+    (0, common_1.Controller)('api/wechat'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [praise_service_1.PraiseService])
 ], PraiseController);

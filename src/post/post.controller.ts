@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Delete, Body, Req, Param, Query, UseGuards } from '@nestjs/common';
 import { PostService } from './post.service';
 import { JwtAuthGuard } from '../auth/jwt.guard';
+import { CreatePostDto } from './dto/create-post.dto';
 
 @Controller('api/wechat')
 @UseGuards(JwtAuthGuard)
@@ -10,25 +11,23 @@ export class PostController {
   @Post('post')
   async store(
     @Req() req,
-    @Body() body: {
-      content: string;
-      attachments: string;
-      location: string;
-      private: number;
-      username: string; // Used as topic in legacy
-      mobile: string;
-    },
+    @Body() body: CreatePostDto,
   ) {
     const user = req.user;
     
+    // Normalize attachments to string (comma separated)
+    const attachmentsStr = Array.isArray(body.attachments) 
+      ? body.attachments.join(',') 
+      : (body.attachments || '');
+
     // Create the post
     const result = await this.postService.createPost(
       user.id,
       user.college_id || BigInt(0),
-      body.content,
-      body.attachments,
-      body.username,
-      body.private,
+      body.content || '',
+      attachmentsStr,
+      body.username || '',
+      body.private || 0,
     );
 
     // Note: SMS / notification logic has been skipped for brevity, 
@@ -46,7 +45,7 @@ export class PostController {
     const just = query.just === 'true' || query.just === '1';
     const type = parseInt(query.type, 10);
     const filter = query.filter;
-    const userId = query.user_id ? BigInt(query.user_id) : undefined;
+    const userId = query.user_id && query.user_id !== 'undefined' ? BigInt(query.user_id) : undefined;
 
     return this.postService.getPostList(
       user.app_id,
@@ -69,7 +68,7 @@ export class PostController {
     const just = query.just === 'true' || query.just === '1';
     const type = parseInt(query.type, 10);
     const filter = query.filter;
-    const userId = query.user_id ? BigInt(query.user_id) : undefined;
+    const userId = query.user_id && query.user_id !== 'undefined' ? BigInt(query.user_id) : undefined;
 
     return this.postService.getPostList(
       user.app_id,
@@ -81,6 +80,21 @@ export class PostController {
       filter,
       userId,
     );
+  }
+
+  @Get('most_new_post')
+  async mostNewPost() {
+    return { error_code: 0, data: { page_data: [] } };
+  }
+
+  @Get('topic')
+  async topic() {
+    return { error_code: 0, data: null };
+  }
+
+  @Post('praise/:id/topic')
+  async praiseTopic(@Param('id') id: string) {
+    return { error_code: 0, data: null };
   }
 
   @Get('post/:id')

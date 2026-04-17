@@ -112,7 +112,7 @@ let PostService = class PostService {
             };
         });
         return {
-            data: formattedPosts,
+            page_data: formattedPosts,
             total,
             page: pageNumber,
             pageSize,

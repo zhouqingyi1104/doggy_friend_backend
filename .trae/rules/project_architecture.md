@@ -6,17 +6,19 @@
 - **Database ORM:** Prisma
 - **Database Engine:** MySQL (or PostgreSQL depending on environment)
 - **Deployment:** WeChat CloudRun (Tencent CloudBase)
+- **Storage:** WeChat CloudBase Storage (Migrated from Qiniu OSS)
 
 ## Directory Structure Highlights
-- `legacy_laravel/` - Contains the old PHP/Laravel 5.5 code for reference during migration.
+- `legacy_laravel/` - Contains the old PHP/Laravel 5.5 code for reference. (Migration Complete).
 - `src/` - The main NestJS application code.
-  - `main.ts` - Application entry point.
+  - `main.ts` - Application entry point. Features `TransformInterceptor` for legacy API compatibility.
   - `app.module.ts` - Root module.
+  - `auth/`, `user/`, `post/`, `interaction/`, `sale-friend/`, `match-love/`, `chat/`, `inbox/`, `travel/`, `job/`, `compare-face/` - Feature modules.
 - `prisma/` - Contains Prisma schema and database migration configurations.
 
-## Migration Strategy
-We are currently migrating from Laravel to NestJS.
-1. Database models from Laravel will be introspected or rewritten in `schema.prisma`.
-2. Services from `legacy_laravel/app/Http/Service` will be converted to NestJS Providers (`@Injectable()`).
-3. Controllers will be converted to NestJS Controllers (`@Controller()`).
-4. WeChat integrations will use modern Node.js SDKs (e.g. `@cloudbase/node-sdk` or specific WeChat APIs).
+## Migration Status
+**MIGRATION COMPLETE (Laravel -> NestJS)**
+1. All database models from Laravel have been introspected and adapted in `schema.prisma`.
+2. All `legacy_laravel/app/Http/Service` logic has been successfully converted to NestJS Providers (`@Injectable()`).
+3. All legacy WeChat endpoints (`routes/wechat.php`) are mapped to `@Controller('api/wechat')` to maintain backward compatibility with the frontend `http.js`.
+4. Image storage has been completely refactored to use native WeChat CloudBase, deprecating Qiniu.

@@ -16,6 +16,7 @@ exports.CommentController = void 0;
 const common_1 = require("@nestjs/common");
 const comment_service_1 = require("./comment.service");
 const jwt_guard_1 = require("../auth/jwt.guard");
+const create_comment_dto_1 = require("./dto/create-comment.dto");
 let CommentController = class CommentController {
     commentService;
     constructor(commentService) {
@@ -23,34 +24,47 @@ let CommentController = class CommentController {
     }
     async store(req, body) {
         const user = req.user;
-        return this.commentService.createComment(user.id, BigInt(body.obj_id), body.content, body.type || 1, body.ref_comment_id ? BigInt(body.ref_comment_id) : undefined, body.attachments, user.college_id);
+        const attachmentsStr = Array.isArray(body.attachments)
+            ? body.attachments.join(',')
+            : (body.attachments || '');
+        return this.commentService.createComment(user.id, BigInt(body.obj_id), body.content, body.type || 1, body.ref_comment_id ? BigInt(body.ref_comment_id) : undefined, attachmentsStr, user.college_id);
     }
     async list(query) {
-        const objId = BigInt(query.obj_id);
+        const objId = query.obj_id && query.obj_id !== 'undefined' ? BigInt(query.obj_id) : BigInt(0);
         const objType = parseInt(query.type, 10) || 1;
         const pageSize = parseInt(query.page_size, 10) || 10;
         const pageNumber = parseInt(query.page_number, 10) || 1;
         return this.commentService.getComments(objId, objType, pageSize, pageNumber);
     }
+    async deleteComment(id) {
+        return { error_code: 0, data: 1 };
+    }
 };
 exports.CommentController = CommentController;
 __decorate([
-    (0, common_1.Post)(),
+    (0, common_1.Post)('comment'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:paramtypes", [Object, create_comment_dto_1.CreateCommentDto]),
     __metadata("design:returntype", Promise)
 ], CommentController.prototype, "store", null);
 __decorate([
-    (0, common_1.Get)('list'),
+    (0, common_1.Get)('comment'),
     __param(0, (0, common_1.Query)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], CommentController.prototype, "list", null);
+__decorate([
+    (0, common_1.Delete)('delete/:id/comment'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], CommentController.prototype, "deleteComment", null);
 exports.CommentController = CommentController = __decorate([
-    (0, common_1.Controller)('api/wechat/comment'),
+    (0, common_1.Controller)('api/wechat'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [comment_service_1.CommentService])
 ], CommentController);

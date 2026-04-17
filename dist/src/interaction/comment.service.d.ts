@@ -18,7 +18,7 @@ export declare class CommentService {
         commenter_id: bigint;
     }>;
     getComments(objId: bigint, objType: number, pageSize?: number, pageNumber?: number): Promise<{
-        data: {
+        page_data: {
             commenter: {
                 id: bigint;
                 nickname: string | null;

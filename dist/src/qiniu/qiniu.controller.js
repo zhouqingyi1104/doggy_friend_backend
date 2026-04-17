@@ -20,19 +20,19 @@ let QiniuController = class QiniuController {
     }
     getUploadToken() {
         const token = this.qiniuService.getUploadToken();
-        return { uptoken: token };
+        return { error_code: 0, data: { uptoken: token } };
     }
 };
 exports.QiniuController = QiniuController;
 __decorate([
-    (0, common_1.Get)('token'),
+    (0, common_1.Get)('upload_token'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], QiniuController.prototype, "getUploadToken", null);
 exports.QiniuController = QiniuController = __decorate([
-    (0, common_1.Controller)('api/qiniu'),
+    (0, common_1.Controller)('api/wechat'),
     __metadata("design:paramtypes", [qiniu_service_1.QiniuService])
 ], QiniuController);
 //# sourceMappingURL=qiniu.controller.js.map

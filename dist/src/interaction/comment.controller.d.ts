@@ -1,14 +1,9 @@
 import { CommentService } from './comment.service';
+import { CreateCommentDto } from './dto/create-comment.dto';
 export declare class CommentController {
     private readonly commentService;
     constructor(commentService: CommentService);
-    store(req: any, body: {
-        obj_id: string;
-        content: string;
-        type: number;
-        ref_comment_id?: string;
-        attachments?: string;
-    }): Promise<{
+    store(req: any, body: CreateCommentDto): Promise<{
         id: bigint;
         college_id: bigint | null;
         status: number;
@@ -24,7 +19,7 @@ export declare class CommentController {
         commenter_id: bigint;
     }>;
     list(query: any): Promise<{
-        data: {
+        page_data: {
             commenter: {
                 id: bigint;
                 nickname: string | null;
@@ -51,5 +46,9 @@ export declare class CommentController {
         page: number;
         pageSize: number;
         last_page: number;
+    }>;
+    deleteComment(id: string): Promise<{
+        error_code: number;
+        data: number;
     }>;
 }

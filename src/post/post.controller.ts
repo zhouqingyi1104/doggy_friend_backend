@@ -37,6 +37,29 @@ export class PostController {
     return result;
   }
 
+  @Get()
+  async postListLegacy(@Req() req, @Query() query: any) {
+    const user = req.user;
+    
+    const pageSize = parseInt(query.page_size, 10) || 10;
+    const pageNumber = parseInt(query.page_number, 10) || 1;
+    const just = query.just === 'true' || query.just === '1';
+    const type = parseInt(query.type, 10);
+    const filter = query.filter;
+    const userId = query.user_id ? BigInt(query.user_id) : undefined;
+
+    return this.postService.getPostList(
+      user.app_id,
+      user.id,
+      pageSize,
+      pageNumber,
+      type,
+      just,
+      filter,
+      userId,
+    );
+  }
+
   @Get('list')
   async postList(@Req() req, @Query() query: any) {
     const user = req.user;

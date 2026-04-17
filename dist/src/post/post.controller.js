@@ -26,6 +26,16 @@ let PostController = class PostController {
         const result = await this.postService.createPost(user.id, user.college_id || BigInt(0), body.content, body.attachments, body.username, body.private);
         return result;
     }
+    async postListLegacy(req, query) {
+        const user = req.user;
+        const pageSize = parseInt(query.page_size, 10) || 10;
+        const pageNumber = parseInt(query.page_number, 10) || 1;
+        const just = query.just === 'true' || query.just === '1';
+        const type = parseInt(query.type, 10);
+        const filter = query.filter;
+        const userId = query.user_id ? BigInt(query.user_id) : undefined;
+        return this.postService.getPostList(user.app_id, user.id, pageSize, pageNumber, type, just, filter, userId);
+    }
     async postList(req, query) {
         const user = req.user;
         const pageSize = parseInt(query.page_size, 10) || 10;
@@ -49,6 +59,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "store", null);
+__decorate([
+    (0, common_1.Get)(),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Query)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PostController.prototype, "postListLegacy", null);
 __decorate([
     (0, common_1.Get)('list'),
     __param(0, (0, common_1.Req)()),

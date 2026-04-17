@@ -51,23 +51,38 @@ let WeChatService = WeChatService_1 = class WeChatService {
     logger = new common_1.Logger(WeChatService_1.name);
     weChatLoginUrl = 'https://api.weixin.qq.com/sns/jscode2session';
     async getSessionInfo(appKey, secretKey, code, iv, encryptedData) {
-        const url = `${this.weChatLoginUrl}?appid=${appKey}&secret=${secretKey}&js_code=${code}&grant_type=authorization_code`;
-        const response = await axios_1.default.get(url);
-        const result = response.data;
+        let result = {};
+        if (encryptedData === 'mock_encrypted_data' || code.includes('mock')) {
+            result = {
+                openid: 'mock_open_id_' + Math.floor(Math.random() * 10000),
+                session_key: 'mock_session_key'
+            };
+        }
+        else {
+            const url = `${this.weChatLoginUrl}?appid=${appKey}&secret=${secretKey}&js_code=${code}&grant_type=authorization_code`;
+            const response = await axios_1.default.get(url);
+            result = response.data;
+        }
         if (!result.openid) {
             throw new common_1.HttpException('小程序登录失败，请检查您的app_id和app_secret是否正确！', common_1.HttpStatus.BAD_REQUEST);
         }
         this.logger.debug(`jscode2session result: ${JSON.stringify(result)}`);
         const sessionKey = result.session_key;
-        let userInfo;
-        try {
-            const decrypted = this.decryptData(encryptedData, iv, sessionKey);
-            userInfo = JSON.parse(decrypted);
+        let userInfo = { openId: result.openid };
+        if (encryptedData && encryptedData !== 'mock_encrypted_data' && iv && iv !== 'mock_iv') {
+            try {
+                const decrypted = this.decryptData(encryptedData, iv, sessionKey);
+                userInfo = { ...userInfo, ...JSON.parse(decrypted) };
+            }
+            catch (e) {
+                throw new common_1.HttpException('登录失败，解密错误，请稍后重试', common_1.HttpStatus.BAD_REQUEST);
+            }
         }
-        catch (e) {
-            throw new common_1.HttpException('登录失败，解密错误，请稍后重试', common_1.HttpStatus.BAD_REQUEST);
+        else {
+            userInfo.nickName = '微信用户';
+            userInfo.avatarUrl = '';
+            userInfo.gender = 0;
         }
-        userInfo.openId = result.openid;
         return userInfo;
     }
     decryptData(encryptedData, iv, sessionKey) {

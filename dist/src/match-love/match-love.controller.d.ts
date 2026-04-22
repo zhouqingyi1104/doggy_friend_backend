@@ -4,6 +4,7 @@ export declare class MatchLoveController {
     private readonly matchLoveService;
     constructor(matchLoveService: MatchLoveService);
     save(req: any, body: CreateMatchLoveDto): Promise<{
+        content: string | null;
         id: bigint;
         college_id: bigint | null;
         status: number;
@@ -13,7 +14,6 @@ export declare class MatchLoveController {
         attachments: string | null;
         password: string | null;
         type: number;
-        content: string | null;
         private: number;
         comment_number: number;
         praise_number: number;

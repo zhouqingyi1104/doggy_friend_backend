@@ -50,6 +50,11 @@ export class CommentService {
         where: { id: objId },
         data: { comment_number: { increment: 1 } },
       });
+    } else if (objType === 5) {
+      await this.prisma.topics.update({
+        where: { id: objId },
+        data: { comment_number: { increment: 1 } },
+      });
     }
 
     // Inbox notification would go here

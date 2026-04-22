@@ -30,4 +30,27 @@ export declare class TravelService {
         pageSize: number;
         last_page: number;
     }>;
+    getRankList(pageSize?: number, pageNumber?: number): Promise<{
+        page_data: {
+            user: {
+                id: bigint;
+                nickname: string | null;
+                avatar: string | null;
+            };
+            users: undefined;
+            id: bigint;
+            status: number;
+            created_at: Date | null;
+            updated_at: Date | null;
+            deleted_at: Date | null;
+            type: number;
+            user_id: bigint;
+            step: bigint;
+            run_at: Date | null;
+        }[];
+        total: number;
+        page: number;
+        pageSize: number;
+        last_page: number;
+    }>;
 }

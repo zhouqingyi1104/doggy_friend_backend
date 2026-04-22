@@ -29,6 +29,10 @@ export declare class UserService {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     } | null>;
     getSchool(userId: bigint): Promise<string>;
     getRecommendSchools(): Promise<unknown>;
@@ -59,6 +63,10 @@ export declare class UserService {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
     searchCollege(name: string): Promise<{
         id: bigint;
@@ -91,8 +99,12 @@ export declare class UserService {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
-    updateUser(userId: bigint, nickname: string, avatar: string): Promise<{
+    updateUser(userId: bigint, nickname?: string, avatar?: string): Promise<{
         id: bigint;
         mobile: string | null;
         college_id: bigint | null;
@@ -119,6 +131,10 @@ export declare class UserService {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
     createOrUpdateProfile(userId: bigint, mobile: string, name: string, grade: string, major: string, studentNumber: string, college: string): Promise<{
         id: bigint;

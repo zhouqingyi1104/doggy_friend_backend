@@ -16,7 +16,8 @@ exports.InboxModule = InboxModule;
 exports.InboxModule = InboxModule = __decorate([
     (0, common_1.Module)({
         controllers: [inbox_controller_1.InboxController],
-        providers: [inbox_service_1.InboxService]
+        providers: [inbox_service_1.InboxService],
+        exports: [inbox_service_1.InboxService]
     })
 ], InboxModule);
 //# sourceMappingURL=inbox.module.js.map

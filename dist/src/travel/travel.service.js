@@ -96,6 +96,28 @@ let TravelService = class TravelService {
             last_page: Math.ceil(total / pageSize),
         };
     }
+    async getRankList(pageSize = 10, pageNumber = 1) {
+        const skip = (pageNumber - 1) * pageSize;
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const items = await this.prisma.run_steps.findMany({
+            where: { run_at: { gte: today } },
+            skip,
+            take: pageSize,
+            orderBy: { step: 'desc' },
+            include: {
+                users: { select: { id: true, nickname: true, avatar: true } }
+            }
+        });
+        const total = await this.prisma.run_steps.count({ where: { run_at: { gte: today } } });
+        return {
+            page_data: items.map(item => ({ ...item, user: item.users, users: undefined })),
+            total,
+            page: pageNumber,
+            pageSize,
+            last_page: Math.ceil(total / pageSize),
+        };
+    }
 };
 exports.TravelService = TravelService;
 exports.TravelService = TravelService = __decorate([

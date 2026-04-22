@@ -4,6 +4,7 @@ export declare class PostController {
     private readonly postService;
     constructor(postService: PostService);
     store(req: any, body: CreatePostDto): Promise<{
+        content: string | null;
         id: bigint;
         college_id: bigint | null;
         status: number;
@@ -11,7 +12,6 @@ export declare class PostController {
         updated_at: Date | null;
         deleted_at: Date | null;
         attachments: string | null;
-        content: string | null;
         topic: string;
         private: number;
         comment_number: number;
@@ -20,70 +20,60 @@ export declare class PostController {
     }>;
     postListLegacy(req: any, query: any): Promise<{
         page_data: {
+            id: string;
+            poster_id: string;
+            college_id: string | null;
             users: undefined;
             poster: {
-                id: bigint;
+                id: string;
                 nickname: string | null;
                 avatar: string | null;
-                gender: number;
-            } | {
-                id: number;
-                nickname: string;
-                avatar: string;
                 gender: number;
             };
             has_praise: boolean;
             attachments: string[];
-            id: bigint;
-            college_id: bigint | null;
+            content: string | null;
             status: number;
             created_at: Date | null;
             updated_at: Date | null;
             deleted_at: Date | null;
-            content: string | null;
             topic: string;
             private: number;
             comment_number: number;
             praise_number: number;
-            poster_id: bigint;
         }[];
         total: number;
         page: number;
-        pageSize: number;
+        page_size: number;
         last_page: number;
     }>;
     postList(req: any, query: any): Promise<{
         page_data: {
+            id: string;
+            poster_id: string;
+            college_id: string | null;
             users: undefined;
             poster: {
-                id: bigint;
+                id: string;
                 nickname: string | null;
                 avatar: string | null;
-                gender: number;
-            } | {
-                id: number;
-                nickname: string;
-                avatar: string;
                 gender: number;
             };
             has_praise: boolean;
             attachments: string[];
-            id: bigint;
-            college_id: bigint | null;
+            content: string | null;
             status: number;
             created_at: Date | null;
             updated_at: Date | null;
             deleted_at: Date | null;
-            content: string | null;
             topic: string;
             private: number;
             comment_number: number;
             praise_number: number;
-            poster_id: bigint;
         }[];
         total: number;
         page: number;
-        pageSize: number;
+        page_size: number;
         last_page: number;
     }>;
     mostNewPost(): Promise<{
@@ -92,13 +82,61 @@ export declare class PostController {
             page_data: never[];
         };
     }>;
-    topic(): Promise<{
-        error_code: number;
-        data: null;
+    topic(req: any): Promise<{
+        id: string;
+        user_id: string;
+        attachments: string[];
+        praise_number: string;
+        view_number: string;
+        comment_number: string;
+        content: string | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        app_id: number;
+        title: string | null;
+        user_type: number;
+    } | null>;
+    topicDetail(id: string): Promise<{
+        id: string;
+        user_id: string;
+        attachments: string[];
+        praise_number: string;
+        view_number: string;
+        comment_number: string;
+        content: string | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        app_id: number;
+        title: string | null;
+        user_type: number;
     }>;
+    topicComments(id: string, query: any): Promise<{
+        page_data: any[];
+        total: number;
+        page: number;
+        pageSize: number;
+        last_page: number;
+    }>;
+    topicNewComments(id: string, time: string): Promise<any[]>;
     praiseTopic(id: string): Promise<{
-        error_code: number;
-        data: null;
+        id: string;
+        user_id: string;
+        praise_number: string;
+        view_number: string;
+        comment_number: string;
+        content: string | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        attachments: string | null;
+        app_id: number;
+        title: string | null;
+        user_type: number;
     }>;
     detail(req: any, id: string): Promise<any>;
     destroy(req: any, id: string): Promise<{

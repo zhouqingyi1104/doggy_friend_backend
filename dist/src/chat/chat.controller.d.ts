@@ -6,6 +6,7 @@ export declare class ChatController {
         content?: string;
         attachments?: string | string[];
     }): Promise<{
+        content: string | null;
         id: bigint;
         status: number;
         created_at: Date | null;
@@ -13,26 +14,27 @@ export declare class ChatController {
         deleted_at: Date | null;
         attachments: string | null;
         type: number;
-        content: string | null;
         post_at: Date | null;
         read_at: Date | null;
         from_user_id: bigint;
         to_user_id: bigint;
+        task_id: bigint | null;
     }>;
     chatList(req: any, friendId: string, pageSize?: string, pageNumber?: string): Promise<{
         page_data: {
             attachments: string[];
+            content: string | null;
             id: bigint;
             status: number;
             created_at: Date | null;
             updated_at: Date | null;
             deleted_at: Date | null;
             type: number;
-            content: string | null;
             post_at: Date | null;
             read_at: Date | null;
             from_user_id: bigint;
             to_user_id: bigint;
+            task_id: bigint | null;
         }[];
         total: number;
         page: number;
@@ -42,17 +44,18 @@ export declare class ChatController {
     newLetter(req: any): Promise<number>;
     getNewMessage(req: any, friendId: string): Promise<{
         attachments: string[];
+        content: string | null;
         id: bigint;
         status: number;
         created_at: Date | null;
         updated_at: Date | null;
         deleted_at: Date | null;
         type: number;
-        content: string | null;
         post_at: Date | null;
         read_at: Date | null;
         from_user_id: bigint;
         to_user_id: bigint;
+        task_id: bigint | null;
     }[]>;
     friends(req: any): Promise<{
         unread_count: any;

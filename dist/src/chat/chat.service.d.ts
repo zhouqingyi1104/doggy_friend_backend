@@ -5,6 +5,7 @@ export declare class ChatService {
     private readonly inboxService;
     constructor(prisma: PrismaService, inboxService: InboxService);
     sendMessage(userId: bigint, friendId: bigint, content: string, attachments: string): Promise<{
+        content: string | null;
         id: bigint;
         status: number;
         created_at: Date | null;
@@ -12,26 +13,27 @@ export declare class ChatService {
         deleted_at: Date | null;
         attachments: string | null;
         type: number;
-        content: string | null;
         post_at: Date | null;
         read_at: Date | null;
         from_user_id: bigint;
         to_user_id: bigint;
+        task_id: bigint | null;
     }>;
     getChatList(userId: bigint, friendId: bigint, pageSize?: number, pageNumber?: number): Promise<{
         page_data: {
             attachments: string[];
+            content: string | null;
             id: bigint;
             status: number;
             created_at: Date | null;
             updated_at: Date | null;
             deleted_at: Date | null;
             type: number;
-            content: string | null;
             post_at: Date | null;
             read_at: Date | null;
             from_user_id: bigint;
             to_user_id: bigint;
+            task_id: bigint | null;
         }[];
         total: number;
         page: number;
@@ -40,17 +42,18 @@ export declare class ChatService {
     }>;
     getNewMessages(userId: bigint, friendId: bigint): Promise<{
         attachments: string[];
+        content: string | null;
         id: bigint;
         status: number;
         created_at: Date | null;
         updated_at: Date | null;
         deleted_at: Date | null;
         type: number;
-        content: string | null;
         post_at: Date | null;
         read_at: Date | null;
         from_user_id: bigint;
         to_user_id: bigint;
+        task_id: bigint | null;
     }[]>;
     getNewLetterCount(userId: bigint): Promise<number>;
     getFriends(userId: bigint): Promise<{

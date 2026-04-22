@@ -21,6 +21,11 @@ const match_love_module_1 = require("./match-love/match-love.module");
 const compare_face_module_1 = require("./compare-face/compare-face.module");
 const travel_module_1 = require("./travel/travel.module");
 const job_module_1 = require("./job/job.module");
+const utils_module_1 = require("./utils/utils.module");
+const task_module_1 = require("./task/task.module");
+const wallet_module_1 = require("./wallet/wallet.module");
+const goods_module_1 = require("./goods/goods.module");
+const review_module_1 = require("./review/review.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -40,6 +45,11 @@ exports.AppModule = AppModule = __decorate([
             compare_face_module_1.CompareFaceModule,
             travel_module_1.TravelModule,
             job_module_1.JobModule,
+            utils_module_1.UtilsModule,
+            task_module_1.TaskModule,
+            wallet_module_1.WalletModule,
+            goods_module_1.GoodsModule,
+            review_module_1.ReviewModule,
         ],
         controllers: [],
         providers: [],

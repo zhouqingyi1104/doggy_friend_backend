@@ -99,6 +99,7 @@ model chat_messages {
   id           BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
   from_user_id BigInt
   to_user_id   BigInt
+  task_id      BigInt?
   content      String?   @db.LongText
   attachments  String?   @db.Text
   type         Int       @default(1) @db.TinyInt
@@ -112,6 +113,7 @@ model chat_messages {
   @@index([created_at], map: "chat_messages_created_at_index")
   @@index([from_user_id], map: "chat_messages_from_user_id_index")
   @@index([to_user_id], map: "chat_messages_to_user_id_index")
+  @@index([task_id], map: "chat_messages_task_id_index")
   @@index([updated_at], map: "chat_messages_updated_at_index")
 }
 
@@ -352,7 +354,7 @@ model part_time_jobs {
   updated_at  DateTime? @db.Timestamp(0)
   deleted_at  DateTime? @db.Timestamp(0)
 
-  users       users     @relation(fields: [user_id], references: [id])
+  users users @relation(fields: [user_id], references: [id])
 
   @@index([created_at], map: "part_time_jobs_created_at_index")
   @@index([end_at], map: "part_time_jobs_end_at_index")
@@ -435,6 +437,8 @@ model run_steps {
   updated_at DateTime? @db.Timestamp(0)
   deleted_at DateTime? @db.Timestamp(0)
 
+  users users @relation(fields: [user_id], references: [id])
+
   @@index([created_at], map: "run_steps_created_at_index")
   @@index([run_at], map: "run_steps_run_at_index")
   @@index([updated_at], map: "run_steps_updated_at_index")
@@ -460,7 +464,7 @@ model sale_friends {
   updated_at     DateTime? @db.Timestamp(0)
   deleted_at     DateTime? @db.Timestamp(0)
 
-  users          users     @relation(fields: [owner_id], references: [id])
+  users users @relation(fields: [owner_id], references: [id])
 
   @@index([college_id], map: "sale_friends_college_id_index")
   @@index([created_at], map: "sale_friends_created_at_index")
@@ -747,12 +751,27 @@ model users {
   post_num           Int       @default(0)
   clock_num          Int       @default(0)
   college_id         BigInt?
-  
-  colleges           colleges? @relation(fields: [college_id], references: [id])
-  posts              posts[]
-  comments           comments[]
-  sale_friends       sale_friends[]
-  part_time_jobs     part_time_jobs[]
+
+  // PRD New Fields
+  real_name    String? @db.VarChar(50)
+  student_id   String? @db.VarChar(20)
+  credit_score Int     @default(100)
+  level        Int     @default(1) @db.TinyInt
+
+  colleges       colleges?        @relation(fields: [college_id], references: [id])
+  posts          posts[]
+  comments       comments[]
+  sale_friends   sale_friends[]
+  part_time_jobs part_time_jobs[]
+  run_steps      run_steps[]
+
+  tasks_bought     tasks[]        @relation("TaskBuyer")
+  tasks_sold       tasks[]        @relation("TaskSeller")
+  goods_sold       goods[]        @relation("GoodsSeller")
+  goods_bought     goods_orders[] @relation("GoodsOrderBuyer")
+  wallet           wallets?
+  reviews_given    reviews[]      @relation("Reviewer")
+  reviews_received reviews[]      @relation("Reviewee")
 
   @@index([app_id], map: "users_app_id_index")
   @@index([created_at], map: "users_created_at_index")
@@ -776,4 +795,106 @@ model videos {
   deleted_at   DateTime? @db.Timestamp(0)
 
   @@index([app_id], map: "videos_app_id_index")
+}
+
+model tasks {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  buyer_id    BigInt    @db.UnsignedBigInt
+  type        Int       @db.TinyInt // 1=代购, 2=搬运, 3=其他
+  title       String    @db.VarChar(100)
+  description String?   @db.Text
+  location    String?   @db.VarChar(100)
+  time_range  String?   @db.VarChar(50)
+  price       Decimal   @db.Decimal(10, 2)
+  status      Int       @default(1) @db.TinyInt // 1=待接单, 2=进行中, 3=已完成, 4=取消
+  seller_id   BigInt?   @db.UnsignedBigInt
+  deposit     Decimal   @default(0.00) @db.Decimal(10, 2)
+  min_credit  Int       @default(0) @db.TinyInt
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+  deleted_at  DateTime? @db.Timestamp(0)
+
+  buyer        users     @relation("TaskBuyer", fields: [buyer_id], references: [id], onDelete: Cascade)
+  seller       users?    @relation("TaskSeller", fields: [seller_id], references: [id], onDelete: SetNull)
+  order        orders?
+
+  @@index([buyer_id], map: "tasks_buyer_id_index")
+  @@index([seller_id], map: "tasks_seller_id_index")
+  @@index([status], map: "tasks_status_index")
+}
+
+model orders {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  task_id    BigInt    @unique @db.UnsignedBigInt
+  amount     Decimal   @db.Decimal(10, 2)
+  status     Int       @default(0) @db.TinyInt // 0=未支付, 1=押金支付, 2=完成, 3=退款
+  pay_time   DateTime? @db.Timestamp(0)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+
+  task       tasks     @relation(fields: [task_id], references: [id], onDelete: Cascade)
+}
+
+model goods {
+  id          BigInt         @id @default(autoincrement()) @db.UnsignedBigInt
+  seller_id   BigInt         @db.UnsignedBigInt
+  title       String         @db.VarChar(100)
+  description String?        @db.Text
+  category    String?        @db.VarChar(50)
+  price       Decimal        @db.Decimal(10, 2)
+  stock       Int            @default(1)
+  created_at  DateTime?      @db.Timestamp(0)
+  updated_at  DateTime?      @db.Timestamp(0)
+  deleted_at  DateTime?      @db.Timestamp(0)
+
+  seller      users          @relation("GoodsSeller", fields: [seller_id], references: [id], onDelete: Cascade)
+  orders      goods_orders[]
+
+  @@index([seller_id], map: "goods_seller_id_index")
+}
+
+model goods_orders {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  goods_id   BigInt    @db.UnsignedBigInt
+  buyer_id   BigInt    @db.UnsignedBigInt
+  quantity   Int       @default(1)
+  amount     Decimal   @db.Decimal(10, 2)
+  status     Int       @default(0) @db.TinyInt // 0=待付款, 1=已支付, 2=取消
+  pay_time   DateTime? @db.Timestamp(0)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+
+  goods      goods     @relation(fields: [goods_id], references: [id], onDelete: Cascade)
+  buyer      users     @relation("GoodsOrderBuyer", fields: [buyer_id], references: [id], onDelete: Cascade)
+
+  @@index([goods_id], map: "goods_orders_goods_id_index")
+  @@index([buyer_id], map: "goods_orders_buyer_id_index")
+}
+
+model reviews {
+  id          BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id    BigInt    @db.UnsignedBigInt // Could refer to tasks.orders or goods_orders, keeping logic in app
+  reviewer_id BigInt    @db.UnsignedBigInt
+  reviewee_id BigInt    @db.UnsignedBigInt
+  rating      Int       @db.TinyInt // 1~5
+  comment     String?   @db.Text
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+
+  reviewer    users     @relation("Reviewer", fields: [reviewer_id], references: [id], onDelete: Cascade)
+  reviewee    users     @relation("Reviewee", fields: [reviewee_id], references: [id], onDelete: Cascade)
+
+  @@index([order_id], map: "reviews_order_id_index")
+  @@index([reviewer_id], map: "reviews_reviewer_id_index")
+  @@index([reviewee_id], map: "reviews_reviewee_id_index")
+}
+
+model wallets {
+  user_id        BigInt    @id @db.UnsignedBigInt
+  balance        Decimal   @default(0.00) @db.Decimal(12, 2)
+  frozen_balance Decimal   @default(0.00) @db.Decimal(12, 2)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+
+  user           users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }

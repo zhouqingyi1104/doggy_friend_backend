@@ -9,7 +9,8 @@ export class InboxController {
 
   @Get('new/:type/inbox')
   async getNewInbox(@Req() req, @Param('type') type: string) {
-    return this.inboxService.getNewInboxCount(req.user.id, type);
+    const count = await this.inboxService.getNewInboxCount(req.user.id, type);
+    return count;
   }
 
   @Get('user/:type/inbox/:messageType')

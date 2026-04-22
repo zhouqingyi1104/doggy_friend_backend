@@ -54,6 +54,12 @@ let CommentService = class CommentService {
                 data: { comment_number: { increment: 1 } },
             });
         }
+        else if (objType === 5) {
+            await this.prisma.topics.update({
+                where: { id: objId },
+                data: { comment_number: { increment: 1 } },
+            });
+        }
         return comment;
     }
     async getComments(objId, objType, pageSize = 10, pageNumber = 1) {

@@ -69,16 +69,19 @@ let UserService = class UserService {
         });
     }
     async updateUser(userId, nickname, avatar) {
-        if (!nickname || !avatar) {
-            throw new common_1.HttpException('昵称或头像不能为空', common_1.HttpStatus.BAD_REQUEST);
+        const dataToUpdate = { updated_at: new Date() };
+        if (nickname) {
+            dataToUpdate.nickname = nickname;
+        }
+        if (avatar) {
+            dataToUpdate.avatar = avatar;
+        }
+        if (!nickname && !avatar) {
+            throw new common_1.HttpException('没有需要更新的内容', common_1.HttpStatus.BAD_REQUEST);
         }
         return this.prisma.users.update({
             where: { id: userId },
-            data: {
-                nickname,
-                avatar,
-                updated_at: new Date(),
-            },
+            data: dataToUpdate,
         });
     }
     async createOrUpdateProfile(userId, mobile, name, grade, major, studentNumber, college) {

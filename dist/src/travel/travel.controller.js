@@ -35,8 +35,22 @@ let TravelController = class TravelController {
         const pageNumber = parseInt(query.page_number, 10) || 1;
         return this.travelService.getSteps(req.user.id, pageSize, pageNumber);
     }
-    async detail(id) {
+    async randList(req, query) {
+        const pageSize = parseInt(query.page_size, 10) || 10;
+        const pageNumber = parseInt(query.page_number, 10) || 1;
+        return this.travelService.getRankList(pageSize, pageNumber);
+    }
+    async plan() {
         return { error_code: 0, data: null };
+    }
+    async createTravelPlan(req, body) {
+        return { error_code: 0, data: 1 };
+    }
+    async travelLogs() {
+        return { error_code: 0, data: { page_data: [] } };
+    }
+    async runData(req, body) {
+        return this.travelService.saveStep(req.user.id, body.encrypted_data, body.iv, body.code);
     }
 };
 exports.TravelController = TravelController;
@@ -63,7 +77,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], TravelController.prototype, "saveStep", null);
 __decorate([
-    (0, common_1.Get)('step_travels'),
+    (0, common_1.Get)('run_steps'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Query)()),
     __metadata("design:type", Function),
@@ -71,12 +85,41 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], TravelController.prototype, "steps", null);
 __decorate([
-    (0, common_1.Get)('step_travel/:id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Get)('rand_list'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Query)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
-], TravelController.prototype, "detail", null);
+], TravelController.prototype, "randList", null);
+__decorate([
+    (0, common_1.Get)('plan'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], TravelController.prototype, "plan", null);
+__decorate([
+    (0, common_1.Post)('create_travel_plan'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], TravelController.prototype, "createTravelPlan", null);
+__decorate([
+    (0, common_1.Get)('ravel_logs'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], TravelController.prototype, "travelLogs", null);
+__decorate([
+    (0, common_1.Post)('run_data'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], TravelController.prototype, "runData", null);
 exports.TravelController = TravelController = __decorate([
     (0, common_1.Controller)('api/wechat'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),

@@ -22,7 +22,7 @@ async function bootstrap() {
     app.use((0, helmet_1.default)());
     app.use((0, express_rate_limit_1.default)({
         windowMs: 15 * 60 * 1000,
-        max: 100,
+        max: 1000,
         message: 'Too many requests from this IP, please try again later.',
     }));
     app.enableCors();

@@ -50,6 +50,41 @@ const crypto = __importStar(require("crypto"));
 let WeChatService = WeChatService_1 = class WeChatService {
     logger = new common_1.Logger(WeChatService_1.name);
     weChatLoginUrl = 'https://api.weixin.qq.com/sns/jscode2session';
+    weChatTokenUrl = 'https://api.weixin.qq.com/cgi-bin/token';
+    weChatMsgCheckUrl = 'https://api.weixin.qq.com/wxa/msg_sec_check';
+    SENSITIVE_WORDS = ['课程', '上课', '代课', '辅导', '家教'];
+    async checkText(appKey, secretKey, content) {
+        for (const word of this.SENSITIVE_WORDS) {
+            if (content.includes(word)) {
+                throw new common_1.HttpException(`内容含有违规敏感词汇（如教育相关词汇），请修改为“时间互助/技能服务/任务委托”等中性表述`, common_1.HttpStatus.BAD_REQUEST);
+            }
+        }
+        if (appKey.includes('mock') || secretKey.includes('mock')) {
+            return true;
+        }
+        try {
+            const tokenUrl = `${this.weChatTokenUrl}?grant_type=client_credential&appid=${appKey}&secret=${secretKey}`;
+            const tokenRes = await axios_1.default.get(tokenUrl);
+            const accessToken = tokenRes.data.access_token;
+            if (!accessToken) {
+                this.logger.warn(`Failed to get access token for msg_sec_check: ${JSON.stringify(tokenRes.data)}`);
+                return true;
+            }
+            const checkUrl = `${this.weChatMsgCheckUrl}?access_token=${accessToken}`;
+            const checkRes = await axios_1.default.post(checkUrl, { content });
+            if (checkRes.data.errcode === 87014) {
+                throw new common_1.HttpException('内容含违规信息，请修改后重试', common_1.HttpStatus.BAD_REQUEST);
+            }
+            return true;
+        }
+        catch (error) {
+            if (error instanceof common_1.HttpException) {
+                throw error;
+            }
+            this.logger.error(`msg_sec_check error: ${error.message}`);
+            return true;
+        }
+    }
     async getSessionInfo(appKey, secretKey, code, iv, encryptedData) {
         let result = {};
         if (encryptedData === 'mock_encrypted_data' || code.includes('mock')) {

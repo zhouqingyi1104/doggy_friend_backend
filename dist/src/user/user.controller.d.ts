@@ -33,6 +33,10 @@ export declare class UserController {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     } | null>;
     school(req: any): Promise<string>;
     recommendSchool(): Promise<unknown>;
@@ -63,6 +67,10 @@ export declare class UserController {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
     searchCollege(name: string): Promise<{
         id: bigint;
@@ -95,10 +103,14 @@ export declare class UserController {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
     updateSignature(req: any, body: {
-        nickname: string;
-        avatar: string;
+        nickname?: string;
+        avatar?: string;
     }): Promise<{
         id: bigint;
         mobile: string | null;
@@ -126,10 +138,49 @@ export declare class UserController {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
     service(): Promise<{
         error_code: number;
         data: number;
+    }>;
+    updateUserProfile(req: any, body: {
+        nickname?: string;
+        avatar?: string;
+    }): Promise<{
+        id: bigint;
+        mobile: string | null;
+        college_id: bigint | null;
+        status: number;
+        created_at: Date | null;
+        updated_at: Date | null;
+        deleted_at: Date | null;
+        app_id: bigint;
+        nickname: string | null;
+        password: string | null;
+        avatar: string | null;
+        gender: number;
+        open_id: string | null;
+        union_id: string | null;
+        city: string;
+        country: string;
+        language: string;
+        province: string;
+        type: number;
+        remember_token: string | null;
+        active_value: number;
+        personal_signature: string;
+        follow_num: number;
+        fans_num: number;
+        post_num: number;
+        clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
     createProfile(req: any, body: {
         mobile: string;
@@ -179,6 +230,10 @@ export declare class UserController {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     } | null>;
     saleFriendsV2(): Promise<{
         error_code: number;

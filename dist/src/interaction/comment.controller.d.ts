@@ -4,6 +4,7 @@ export declare class CommentController {
     private readonly commentService;
     constructor(commentService: CommentService);
     store(req: any, body: CreateCommentDto): Promise<{
+        content: string;
         id: bigint;
         college_id: bigint | null;
         status: number;
@@ -12,11 +13,10 @@ export declare class CommentController {
         deleted_at: Date | null;
         attachments: string | null;
         type: number;
-        content: string;
         obj_id: bigint;
         obj_type: number;
-        ref_comment_id: bigint | null;
         commenter_id: bigint;
+        ref_comment_id: bigint | null;
     }>;
     list(query: any): Promise<{
         page_data: {
@@ -29,6 +29,7 @@ export declare class CommentController {
             users: undefined;
             ref_comment: any;
             attachments: string[];
+            content: string;
             id: bigint;
             college_id: bigint | null;
             status: number;
@@ -36,11 +37,10 @@ export declare class CommentController {
             updated_at: Date | null;
             deleted_at: Date | null;
             type: number;
-            content: string;
             obj_id: bigint;
             obj_type: number;
-            ref_comment_id: bigint | null;
             commenter_id: bigint;
+            ref_comment_id: bigint | null;
         }[];
         total: number;
         page: number;

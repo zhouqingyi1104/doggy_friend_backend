@@ -6,11 +6,11 @@ export declare class InboxController {
     userInbox(req: any, type: string, messageType: string, pageSize?: string, pageNumber?: string): Promise<{
         page_data: {
             from_user: any;
+            content: string;
             id: bigint;
             created_at: Date | null;
             updated_at: Date | null;
             deleted_at: Date | null;
-            content: string;
             private: boolean;
             obj_id: bigint;
             obj_type: number;

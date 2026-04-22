@@ -50,6 +50,9 @@ let UserController = class UserController {
     async service() {
         return { error_code: 0, data: 1 };
     }
+    async updateUserProfile(req, body) {
+        return this.userService.updateUser(req.user.id, body.nickname, body.avatar);
+    }
     async createProfile(req, body) {
         return this.userService.createOrUpdateProfile(req.user.id, body.mobile, body.username, body.grade, body.major, body.student_number, body.college);
     }
@@ -127,6 +130,14 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "service", null);
+__decorate([
+    (0, common_1.Post)('user/profile'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "updateUserProfile", null);
 __decorate([
     (0, common_1.Post)('profile'),
     __param(0, (0, common_1.Req)()),

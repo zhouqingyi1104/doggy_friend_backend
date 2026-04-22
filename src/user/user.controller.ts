@@ -50,7 +50,7 @@ export class UserController {
   }
 
   @Post('user/update/signature')
-  async updateSignature(@Req() req, @Body() body: { nickname: string; avatar: string }) {
+  async updateSignature(@Req() req, @Body() body: { nickname?: string; avatar?: string }) {
     // legacy used this for nickname/avatar/signature
     return this.userService.updateUser(req.user.id, body.nickname, body.avatar);
   }
@@ -58,6 +58,14 @@ export class UserController {
   @Get('service')
   async service() {
     return { error_code: 0, data: 1 };
+  }
+
+  @Post('user/profile')
+  async updateUserProfile(
+    @Req() req,
+    @Body() body: { nickname?: string; avatar?: string }
+  ) {
+    return this.userService.updateUser(req.user.id, body.nickname, body.avatar);
   }
 
   @Post('profile')

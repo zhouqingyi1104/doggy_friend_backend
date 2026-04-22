@@ -53,11 +53,22 @@ let PostController = class PostController {
     async mostNewPost() {
         return { error_code: 0, data: { page_data: [] } };
     }
-    async topic() {
-        return { error_code: 0, data: null };
+    async topic(req) {
+        return this.postService.getLatestTopic(req.user.app_id);
+    }
+    async topicDetail(id) {
+        return this.postService.getTopicDetail(BigInt(id));
+    }
+    async topicComments(id, query) {
+        const pageSize = parseInt(query.page_size, 10) || 10;
+        const pageNumber = parseInt(query.page_number, 10) || 1;
+        return this.postService.getTopicComments(BigInt(id), pageSize, pageNumber);
+    }
+    async topicNewComments(id, time) {
+        return this.postService.getTopicNewComments(BigInt(id), time);
     }
     async praiseTopic(id) {
-        return { error_code: 0, data: null };
+        return this.postService.praiseTopic(BigInt(id));
     }
     async detail(req, id) {
         return this.postService.getPostDetail(BigInt(id), req.user.id);
@@ -99,10 +110,34 @@ __decorate([
 ], PostController.prototype, "mostNewPost", null);
 __decorate([
     (0, common_1.Get)('topic'),
+    __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "topic", null);
+__decorate([
+    (0, common_1.Get)('topic/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], PostController.prototype, "topicDetail", null);
+__decorate([
+    (0, common_1.Get)('topic/:id/comments'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Query)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], PostController.prototype, "topicComments", null);
+__decorate([
+    (0, common_1.Get)('topic/:id/new_comments'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Query)('time')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", Promise)
+], PostController.prototype, "topicNewComments", null);
 __decorate([
     (0, common_1.Post)('praise/:id/topic'),
     __param(0, (0, common_1.Param)('id')),

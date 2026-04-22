@@ -4,6 +4,7 @@ import { InboxService } from './inbox.service';
 
 @Module({
   controllers: [InboxController],
-  providers: [InboxService]
+  providers: [InboxService],
+  exports: [InboxService] // Export so ChatService can use it
 })
 export class InboxModule {}

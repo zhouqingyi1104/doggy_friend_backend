@@ -3,6 +3,7 @@ export declare class MatchLoveService {
     private readonly prisma;
     constructor(prisma: PrismaService);
     createMatchLove(ownerId: bigint, collegeId: bigint, userName: string, matchName: string, content: string, attachments: string, isPrivate: number): Promise<{
+        content: string | null;
         id: bigint;
         college_id: bigint | null;
         status: number;
@@ -12,7 +13,6 @@ export declare class MatchLoveService {
         attachments: string | null;
         password: string | null;
         type: number;
-        content: string | null;
         private: number;
         comment_number: number;
         praise_number: number;

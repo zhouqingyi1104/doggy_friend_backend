@@ -30,6 +30,10 @@ export declare class JwtStrategy extends JwtStrategy_base {
         fans_num: number;
         post_num: number;
         clock_num: number;
+        real_name: string | null;
+        student_id: string | null;
+        credit_score: number;
+        level: number;
     }>;
 }
 export {};

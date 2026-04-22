@@ -4,6 +4,7 @@ export declare class JobController {
     private readonly jobService;
     constructor(jobService: JobService);
     store(req: any, body: CreateJobDto): Promise<{
+        content: string | null;
         id: bigint;
         status: number;
         created_at: Date | null;
@@ -12,7 +13,6 @@ export declare class JobController {
         attachments: string;
         type: number;
         title: string;
-        content: string | null;
         user_id: bigint;
         salary: number;
         end_at: Date | null;
@@ -29,6 +29,7 @@ export declare class JobController {
                 avatar: string | null;
             };
             attachments: string[];
+            content: string | null;
             id: bigint;
             status: number;
             created_at: Date | null;
@@ -36,7 +37,6 @@ export declare class JobController {
             deleted_at: Date | null;
             type: number;
             title: string;
-            content: string | null;
             user_id: bigint;
             salary: number;
             end_at: Date | null;
@@ -54,6 +54,7 @@ export declare class JobController {
             avatar: string | null;
         };
         attachments: string[];
+        content: string | null;
         id: bigint;
         status: number;
         created_at: Date | null;
@@ -61,7 +62,6 @@ export declare class JobController {
         deleted_at: Date | null;
         type: number;
         title: string;
-        content: string | null;
         user_id: bigint;
         salary: number;
         end_at: Date | null;

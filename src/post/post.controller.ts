@@ -88,13 +88,30 @@ export class PostController {
   }
 
   @Get('topic')
-  async topic() {
-    return { error_code: 0, data: null };
+  async topic(@Req() req) {
+    return this.postService.getLatestTopic(req.user.app_id);
+  }
+
+  @Get('topic/:id')
+  async topicDetail(@Param('id') id: string) {
+    return this.postService.getTopicDetail(BigInt(id));
+  }
+
+  @Get('topic/:id/comments')
+  async topicComments(@Param('id') id: string, @Query() query: any) {
+    const pageSize = parseInt(query.page_size, 10) || 10;
+    const pageNumber = parseInt(query.page_number, 10) || 1;
+    return this.postService.getTopicComments(BigInt(id), pageSize, pageNumber);
+  }
+
+  @Get('topic/:id/new_comments')
+  async topicNewComments(@Param('id') id: string, @Query('time') time: string) {
+    return this.postService.getTopicNewComments(BigInt(id), time);
   }
 
   @Post('praise/:id/topic')
   async praiseTopic(@Param('id') id: string) {
-    return { error_code: 0, data: null };
+    return this.postService.praiseTopic(BigInt(id));
   }
 
   @Get('post/:id')

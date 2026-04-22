@@ -68,18 +68,22 @@ export class UserService {
     });
   }
 
-  async updateUser(userId: bigint, nickname: string, avatar: string) {
-    if (!nickname || !avatar) {
-      throw new HttpException('昵称或头像不能为空', HttpStatus.BAD_REQUEST);
+  async updateUser(userId: bigint, nickname?: string, avatar?: string) {
+    const dataToUpdate: any = { updated_at: new Date() };
+    if (nickname) {
+      dataToUpdate.nickname = nickname;
+    }
+    if (avatar) {
+      dataToUpdate.avatar = avatar;
+    }
+
+    if (!nickname && !avatar) {
+      throw new HttpException('没有需要更新的内容', HttpStatus.BAD_REQUEST);
     }
 
     return this.prisma.users.update({
       where: { id: userId },
-      data: {
-        nickname,
-        avatar,
-        updated_at: new Date(),
-      },
+      data: dataToUpdate,
     });
   }
 

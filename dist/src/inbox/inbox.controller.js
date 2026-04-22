@@ -22,7 +22,8 @@ let InboxController = class InboxController {
         this.inboxService = inboxService;
     }
     async getNewInbox(req, type) {
-        return this.inboxService.getNewInboxCount(req.user.id, type);
+        const count = await this.inboxService.getNewInboxCount(req.user.id, type);
+        return count;
     }
     async userInbox(req, type, messageType, pageSize, pageNumber) {
         return this.inboxService.getUserInbox(req.user.id, type, messageType, parseInt(pageSize || '10', 10), parseInt(pageNumber || '1', 10));

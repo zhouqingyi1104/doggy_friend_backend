@@ -33,6 +33,13 @@ let FollowController = class FollowController {
     async followUser(req, body) {
         return this.followService.toggleFollow(req.user.id, BigInt(body.obj_id), 1);
     }
+    async getFollowPage(req, queryObjId, queryUserId, type, pageSize, pageNumber) {
+        let userId = req.user.id;
+        if (queryUserId && queryUserId !== '0' && queryUserId !== 'undefined') {
+            userId = BigInt(queryUserId);
+        }
+        return this.followService.getFollowPage(userId, parseInt(type || '1', 10), parseInt(pageSize || '10', 10), parseInt(pageNumber || '1', 10));
+    }
     async cancelFollow(id, type) {
         return { error_code: 0, data: null };
     }
@@ -70,6 +77,18 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], FollowController.prototype, "followUser", null);
+__decorate([
+    (0, common_1.Get)('follow/page'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Query)('obj_id')),
+    __param(2, (0, common_1.Query)('user_id')),
+    __param(3, (0, common_1.Query)('type')),
+    __param(4, (0, common_1.Query)('page_size')),
+    __param(5, (0, common_1.Query)('page_number')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, String, String, String, String, String]),
+    __metadata("design:returntype", Promise)
+], FollowController.prototype, "getFollowPage", null);
 __decorate([
     (0, common_1.Put)('cancel/:id/follow/:type'),
     __param(0, (0, common_1.Param)('id')),

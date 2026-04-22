@@ -84,6 +84,38 @@ let FollowService = class FollowService {
         });
         return { has_follow: follow ? follow.status === 1 : false };
     }
+    async getFollowPage(userId, type, pageSize = 10, pageNumber = 1) {
+        const skip = (pageNumber - 1) * pageSize;
+        let whereClause = { obj_type: 5 };
+        if (type === 1) {
+            whereClause.user_id = userId;
+            whereClause.status = 1;
+        }
+        else if (type === 2) {
+            whereClause.obj_id = userId;
+            whereClause.status = 1;
+        }
+        const items = await this.prisma.follows.findMany({
+            where: whereClause,
+            skip,
+            take: pageSize,
+            orderBy: { created_at: 'desc' },
+        });
+        const total = await this.prisma.follows.count({ where: whereClause });
+        const formatted = items.map(item => ({
+            ...item,
+            id: item.id.toString(),
+            user_id: item.user_id.toString(),
+            obj_id: item.obj_id.toString(),
+        }));
+        return {
+            page_data: formatted,
+            total,
+            page: pageNumber,
+            pageSize,
+            last_page: Math.ceil(total / pageSize),
+        };
+    }
 };
 exports.FollowService = FollowService;
 exports.FollowService = FollowService = __decorate([

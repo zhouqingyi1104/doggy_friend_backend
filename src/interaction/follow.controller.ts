@@ -55,6 +55,28 @@ export class FollowController {
     );
   }
 
+  @Get('follow/page')
+  async getFollowPage(
+    @Req() req,
+    @Query('obj_id') queryObjId?: string,
+    @Query('user_id') queryUserId?: string,
+    @Query('type') type?: string,
+    @Query('page_size') pageSize?: string,
+    @Query('page_number') pageNumber?: string,
+  ) {
+    let userId = req.user.id;
+    if (queryUserId && queryUserId !== '0' && queryUserId !== 'undefined') {
+      userId = BigInt(queryUserId);
+    }
+    
+    return this.followService.getFollowPage(
+      userId,
+      parseInt(type || '1', 10),
+      parseInt(pageSize || '10', 10),
+      parseInt(pageNumber || '1', 10)
+    );
+  }
+
   @Put('cancel/:id/follow/:type')
   async cancelFollow(@Param('id') id: string, @Param('type') type: string) {
     return { error_code: 0, data: null };

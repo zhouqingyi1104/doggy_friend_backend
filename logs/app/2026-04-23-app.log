@@ -1912,3 +1912,1176 @@
 {"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T20:47:49.064Z"}
 {"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T20:47:49.064Z"}
 {"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T20:47:49.103Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:01:50.891Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:01:50.915Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:01:50.920Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:01:50.921Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:01:50.921Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:01:50.931Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:01:50.933Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:01:50.934Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:01:50.935Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:01:50.935Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:01:50.935Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:01:50.936Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:01:50.936Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:01:50.936Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:01:50.936Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:01:50.936Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:01:50.937Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:01:50.937Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:01:50.937Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:01:50.937Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:01:50.938Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:01:50.938Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:01:50.938Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.977Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:01:50.980Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.980Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:01:50.981Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:01:50.982Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:01:50.982Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:01:50.983Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:01:50.983Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:01:50.984Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:01:50.984Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:01:50.985Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:01:50.986Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:01:50.986Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:01:50.986Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:01:50.987Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:50.987Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.987Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:01:50.988Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:01:50.988Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:01:50.988Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:01:50.989Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:01:50.989Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:01:50.990Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:01:50.990Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:01:50.991Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:01:50.991Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:01:50.991Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:01:50.992Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.992Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:01:50.992Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.993Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:01:50.993Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:01:50.994Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:01:50.995Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.995Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:01:50.995Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:01:50.996Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:01:50.996Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:01:50.996Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:01:50.997Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.997Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:01:50.997Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:01:50.997Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:01:50.998Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:01:50.998Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:01:50.998Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:01:50.999Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:01:50.999Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:01:50.999Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.000Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:01:51.000Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:01:51.000Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.001Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:01:51.001Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:01:51.001Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:51.002Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:01:51.002Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:01:51.002Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:01:51.003Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.003Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:01:51.003Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:01:51.004Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:01:51.004Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:01:51.005Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:01:51.005Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:01:51.005Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.005Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:01:51.006Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:01:51.006Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.006Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:01:51.007Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:01:51.007Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:01:51.007Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:01:51.007Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:01:51.008Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:01:51.008Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:01:51.009Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:01:51.009Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:01:51.010Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.010Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:01:51.011Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:01:51.011Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:01:51.012Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:01:51.012Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:01:51.012Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:01:51.013Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:01:51.013Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:01:51.013Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:01:51.014Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:01:51.014Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:01:51.014Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:01:51.015Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:01:51.015Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:01:51.015Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:01:51.016Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:01:51.016Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:01:51.016Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:01:51.016Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:01:51.017Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:01:51.017Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:01:51.017Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:01:51.018Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:01:51.018Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:01:51.018Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:01:51.019Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:01:51.019Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:01:51.063Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:01:51.344Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:01:51.369Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:01:51.373Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:01:51.374Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:01:51.374Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:01:51.382Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:01:51.384Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:01:51.385Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:01:51.386Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:01:51.387Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:01:51.387Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:01:51.387Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:01:51.387Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:01:51.387Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:01:51.388Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:01:51.388Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:01:51.388Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:01:51.388Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:01:51.389Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:01:51.389Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:01:51.389Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:01:51.390Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:01:51.390Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.430Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:01:51.433Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.433Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:01:51.434Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:01:51.434Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:01:51.435Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:01:51.435Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:01:51.436Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:01:51.436Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:01:51.437Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:01:51.437Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:01:51.438Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:01:51.438Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:01:51.438Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:01:51.439Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:51.439Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.439Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:01:51.439Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:01:51.440Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:01:51.440Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:01:51.440Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:01:51.441Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:01:51.441Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:01:51.442Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:01:51.442Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:01:51.442Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:01:51.443Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:01:51.443Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.443Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:01:51.443Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.444Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:01:51.444Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:01:51.445Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:01:51.445Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.445Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:01:51.446Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:01:51.446Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:01:51.446Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:01:51.447Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:01:51.447Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.447Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:01:51.447Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.448Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:01:51.448Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:01:51.448Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:01:51.448Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:01:51.449Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:01:51.449Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:01:51.449Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.450Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:01:51.450Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:01:51.450Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.451Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:01:51.451Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:01:51.451Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:51.452Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:01:51.452Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:01:51.452Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:01:51.453Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.453Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:01:51.453Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:01:51.453Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:01:51.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:01:51.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:01:51.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:01:51.454Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:01:51.455Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:01:51.455Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:01:51.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:01:51.456Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:01:51.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:01:51.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:01:51.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:01:51.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:01:51.458Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:01:51.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:01:51.459Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:01:51.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:01:51.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:01:51.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:01:51.461Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:01:51.462Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:01:51.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:01:51.463Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:01:51.463Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:01:51.463Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:01:51.464Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:01:51.464Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:01:51.464Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:01:51.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:01:51.465Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:01:51.466Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:01:51.466Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:01:51.466Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:01:51.467Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:01:51.467Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:01:51.468Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:01:51.468Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:01:51.468Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:01:51.468Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:01:51.469Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:01:51.469Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:01:51.470Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:01:51.470Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:01:51.517Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:01:53.621Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:01:53.636Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:01:53.640Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:01:53.640Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:01:53.641Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:01:53.646Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:01:53.647Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:01:53.648Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:01:53.648Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:01:53.650Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:01:53.650Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:01:53.650Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:01:53.650Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:01:53.650Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:01:53.651Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:01:53.651Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.682Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:01:53.685Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.685Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:01:53.685Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:01:53.686Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:01:53.686Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:01:53.686Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:01:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:01:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:01:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:01:53.624Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:01:53.640Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:01:53.643Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:01:53.643Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:01:53.644Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:01:53.649Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:01:53.650Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:01:53.651Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:01:53.651Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:01:53.652Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:01:53.652Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:01:53.652Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:01:53.652Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:01:53.652Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:01:53.653Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:01:53.654Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:01:53.654Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.682Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:01:53.685Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.685Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:01:53.685Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:01:53.686Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:01:53.686Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:01:53.686Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:01:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:01:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:01:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:01:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:01:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:01:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:01:53.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:01:53.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:01:53.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:01:53.705Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:01:53.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:01:53.705Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:01:53.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:01:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.694Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:01:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:01:53.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:01:53.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:01:53.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:01:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:01:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:01:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:01:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:01:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:01:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:01:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:01:53.708Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:01:53.709Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:01:53.709Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:01:53.744Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:01:53.746Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:02:00.853Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:02:00.870Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:02:00.873Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:02:00.874Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:02:00.874Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:02:00.880Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:02:00.882Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:02:00.882Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:02:00.883Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:02:00.883Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:02:00.884Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:02:00.884Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:02:00.884Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:02:00.884Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:02:00.884Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:02:00.885Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:02:00.885Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:02:00.885Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:02:00.885Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:02:00.885Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:02:00.886Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:02:00.886Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:02:00.886Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.917Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:02:00.919Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.919Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:02:00.920Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:02:00.921Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:02:00.921Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:02:00.921Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:02:00.922Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:02:00.922Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:02:00.922Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:02:00.923Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:02:00.924Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:02:00.924Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:02:00.924Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:02:00.924Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:02:00.925Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.925Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:02:00.925Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:02:00.925Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:02:00.926Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:02:00.926Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:02:00.926Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:02:00.926Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:02:00.927Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:02:00.927Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:02:00.928Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:02:00.928Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:02:00.928Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.929Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:02:00.929Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.929Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:02:00.929Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:02:00.930Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:02:00.930Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.930Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:02:00.931Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:02:00.931Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:02:00.931Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:02:00.931Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:02:00.932Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.932Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:02:00.932Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.933Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:02:00.933Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:02:00.933Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:02:00.934Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:02:00.934Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:02:00.934Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:02:00.934Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.934Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:02:00.935Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:02:00.935Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.935Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:02:00.935Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:02:00.936Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:02:00.936Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:02:00.936Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:02:00.936Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:02:00.936Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.936Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:02:00.937Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:02:00.937Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:02:00.937Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:02:00.937Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:02:00.938Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:02:00.938Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.938Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:02:00.938Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:02:00.939Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.939Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:02:00.939Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:02:00.939Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:02:00.940Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:02:00.940Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:02:00.940Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:02:00.940Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:02:00.940Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:02:00.941Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:02:00.941Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:02:00.941Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:02:00.941Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:02:00.942Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:02:00.942Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:02:00.942Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:02:00.942Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:02:00.943Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:02:00.943Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:02:00.943Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:02:00.944Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:02:00.944Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:02:00.945Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:02:00.945Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:02:00.945Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:02:00.946Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:02:00.946Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:02:00.946Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:02:00.946Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:02:00.946Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:02:00.947Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:02:00.947Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:02:00.947Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:02:00.947Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:02:00.947Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:02:00.948Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:02:00.948Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:02:00.948Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:02:00.984Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:02:01.154Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:02:01.172Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:02:01.176Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:02:01.176Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:02:01.177Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:02:01.183Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:02:01.185Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:02:01.186Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:02:01.187Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:02:01.187Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:02:01.187Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:02:01.187Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:02:01.187Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:02:01.188Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:02:01.188Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:02:01.188Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:02:01.188Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:02:01.188Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:02:01.189Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:02:01.189Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:02:01.189Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:02:01.189Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:02:01.190Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.220Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:02:01.223Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.223Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:02:01.224Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:02:01.224Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:02:01.225Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:02:01.225Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:02:01.226Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:02:01.226Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:02:01.226Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:02:01.227Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:02:01.227Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:02:01.228Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:02:01.228Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:02:01.229Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:02:01.229Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.229Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:02:01.230Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:02:01.230Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:02:01.230Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:02:01.231Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:02:01.231Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:02:01.231Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:02:01.232Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:02:01.232Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:02:01.233Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:02:01.233Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:02:01.233Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.234Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:02:01.234Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.234Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:02:01.234Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:02:01.235Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:02:01.235Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.235Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:02:01.236Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:02:01.236Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:02:01.236Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:02:01.237Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:02:01.237Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.237Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:02:01.238Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.238Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:02:01.238Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:02:01.239Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:02:01.239Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:02:01.239Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:02:01.251Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:02:01.252Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.253Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:02:01.254Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:02:01.257Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.258Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:02:01.259Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:02:01.260Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:02:01.264Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:02:01.266Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:02:01.267Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:02:01.267Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.268Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:02:01.269Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:02:01.270Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:02:01.273Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:02:01.278Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:02:01.281Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:02:01.283Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.284Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:02:01.284Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:02:01.285Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:02:01.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:02:01.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:02:01.288Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:02:01.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:02:01.289Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:02:01.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:02:01.290Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:02:01.291Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:02:01.291Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:02:01.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:02:01.292Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:02:01.293Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:02:01.293Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:02:01.296Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:02:01.297Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:02:01.297Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:02:01.297Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:02:01.298Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:02:01.299Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:02:01.299Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:02:01.299Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:02:01.300Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:02:01.301Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:02:01.302Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:02:01.306Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:02:01.306Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:02:01.307Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:02:01.309Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:02:01.309Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:02:01.310Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:02:01.310Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:02:01.311Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:02:01.311Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:02:01.312Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:02:01.312Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:02:01.312Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:02:01.352Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:05:06.723Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:05:06.741Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:05:06.745Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:05:06.746Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:05:06.746Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:05:06.751Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:05:06.752Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:05:06.753Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:05:06.754Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:05:06.755Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:05:06.755Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:05:06.755Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:05:06.755Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:05:06.755Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:05:06.756Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:05:06.756Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:05:06.756Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:05:06.756Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:05:06.757Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:05:06.757Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:05:06.757Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:05:06.758Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:05:06.758Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.789Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:05:06.792Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.792Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:05:06.793Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:05:06.793Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:05:06.793Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:05:06.794Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:05:06.794Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:05:06.795Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:05:06.795Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:05:06.795Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:05:06.796Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:05:06.796Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:05:06.796Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:05:06.797Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:05:06.797Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.797Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:05:06.797Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:05:06.797Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:05:06.798Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:05:06.798Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:05:06.798Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:05:06.799Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:05:06.799Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:05:06.799Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:05:06.799Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:05:06.800Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:05:06.800Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.800Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:05:06.801Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.801Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:05:06.801Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:05:06.801Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:05:06.802Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.802Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:05:06.802Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:05:06.802Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:05:06.803Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:05:06.803Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/page, GET} route","timestamp":"2026-04-22T21:05:06.804Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:05:06.804Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.804Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:05:06.804Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.804Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:05:06.805Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:05:06.805Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:05:06.805Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:05:06.806Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:05:06.806Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:05:06.806Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.807Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:05:06.807Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:05:06.807Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.808Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:05:06.808Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:05:06.808Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:05:06.808Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:05:06.808Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:05:06.809Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:05:06.809Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.809Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:05:06.809Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:05:06.810Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:05:06.810Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:05:06.810Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:05:06.810Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:05:06.810Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.810Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:05:06.811Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:05:06.811Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.811Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:05:06.813Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:05:06.813Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:05:06.814Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:05:06.814Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:05:06.814Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:05:06.814Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:05:06.814Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:05:06.815Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:05:06.815Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:05:06.815Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:05:06.815Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:05:06.816Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:05:06.817Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:05:06.817Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:05:06.817Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:05:06.817Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:05:06.818Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:05:06.818Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:05:06.818Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:05:06.818Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:05:06.818Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:05:06.818Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:05:06.819Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:05:06.820Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:05:06.860Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:05:07.041Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:05:07.058Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:05:07.061Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:05:07.061Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:05:07.061Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:05:07.066Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:05:07.068Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:05:07.068Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:05:07.069Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:05:07.069Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:05:07.069Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:05:07.069Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:05:07.070Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:05:07.070Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:05:07.070Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:05:07.070Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:05:07.071Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:05:07.071Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:05:07.071Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:05:07.072Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:05:07.072Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:05:07.072Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:05:07.072Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.099Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:05:07.101Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.101Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:05:07.102Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:05:07.102Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:05:07.103Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:05:07.103Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:05:07.103Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:05:07.104Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:05:07.104Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:05:07.104Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:05:07.105Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:05:07.105Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:05:07.105Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:05:07.106Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:05:07.106Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.106Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:05:07.106Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:05:07.107Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:05:07.107Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:05:07.107Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:05:07.107Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:05:07.108Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:05:07.108Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:05:07.108Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:05:07.108Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:05:07.108Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:05:07.108Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.109Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:05:07.110Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:05:07.110Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:05:07.110Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:05:07.110Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/page, GET} route","timestamp":"2026-04-22T21:05:07.110Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:05:07.110Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.111Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:05:07.111Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.111Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:05:07.111Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:05:07.111Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:05:07.112Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:05:07.112Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:05:07.112Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:05:07.113Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.113Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:05:07.113Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:05:07.113Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.113Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:05:07.114Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:05:07.114Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:05:07.114Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:05:07.114Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:05:07.114Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:05:07.115Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:05:07.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:05:07.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:05:07.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:05:07.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:05:07.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:05:07.116Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:05:07.117Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:05:07.117Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.117Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:05:07.117Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:05:07.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:05:07.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:05:07.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:05:07.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:05:07.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:05:07.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:05:07.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:05:07.120Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:05:07.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:05:07.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:05:07.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:05:07.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:05:07.121Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:05:07.121Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:05:07.122Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:05:07.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:05:07.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:05:07.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:05:07.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:05:07.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:05:07.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:05:07.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:05:07.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:05:07.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:05:07.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:05:07.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:05:07.125Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:05:07.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:05:07.125Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:05:07.167Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-04-22T21:05:35.052Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-04-22T21:05:35.068Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-04-22T21:05:35.071Z"}
+{"context":"InstanceLoader","level":"info","message":"WeChatModule dependencies initialized","timestamp":"2026-04-22T21:05:35.071Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-04-22T21:05:35.072Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-04-22T21:05:35.078Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-04-22T21:05:35.079Z"}
+{"context":"InstanceLoader","level":"info","message":"QiniuModule dependencies initialized","timestamp":"2026-04-22T21:05:35.080Z"}
+{"context":"InstanceLoader","level":"info","message":"WalletModule dependencies initialized","timestamp":"2026-04-22T21:05:35.081Z"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","timestamp":"2026-04-22T21:05:35.081Z"}
+{"context":"InstanceLoader","level":"info","message":"PostModule dependencies initialized","timestamp":"2026-04-22T21:05:35.081Z"}
+{"context":"InstanceLoader","level":"info","message":"InteractionModule dependencies initialized","timestamp":"2026-04-22T21:05:35.081Z"}
+{"context":"InstanceLoader","level":"info","message":"InboxModule dependencies initialized","timestamp":"2026-04-22T21:05:35.081Z"}
+{"context":"InstanceLoader","level":"info","message":"SaleFriendModule dependencies initialized","timestamp":"2026-04-22T21:05:35.081Z"}
+{"context":"InstanceLoader","level":"info","message":"MatchLoveModule dependencies initialized","timestamp":"2026-04-22T21:05:35.082Z"}
+{"context":"InstanceLoader","level":"info","message":"CompareFaceModule dependencies initialized","timestamp":"2026-04-22T21:05:35.082Z"}
+{"context":"InstanceLoader","level":"info","message":"TravelModule dependencies initialized","timestamp":"2026-04-22T21:05:35.082Z"}
+{"context":"InstanceLoader","level":"info","message":"JobModule dependencies initialized","timestamp":"2026-04-22T21:05:35.082Z"}
+{"context":"InstanceLoader","level":"info","message":"UtilsModule dependencies initialized","timestamp":"2026-04-22T21:05:35.082Z"}
+{"context":"InstanceLoader","level":"info","message":"ChatModule dependencies initialized","timestamp":"2026-04-22T21:05:35.083Z"}
+{"context":"InstanceLoader","level":"info","message":"GoodsModule dependencies initialized","timestamp":"2026-04-22T21:05:35.083Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewModule dependencies initialized","timestamp":"2026-04-22T21:05:35.084Z"}
+{"context":"InstanceLoader","level":"info","message":"TaskModule dependencies initialized","timestamp":"2026-04-22T21:05:35.084Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.112Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/login, POST} route","timestamp":"2026-04-22T21:05:35.114Z"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.114Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/check_login, POST} route","timestamp":"2026-04-22T21:05:35.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/personal_info, GET} route","timestamp":"2026-04-22T21:05:35.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/school, GET} route","timestamp":"2026-04-22T21:05:35.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/recommend_school, GET} route","timestamp":"2026-04-22T21:05:35.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/set/:id/college, PUT} route","timestamp":"2026-04-22T21:05:35.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/search_college, GET} route","timestamp":"2026-04-22T21:05:35.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/clear_school, PUT} route","timestamp":"2026-04-22T21:05:35.117Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/update/signature, POST} route","timestamp":"2026-04-22T21:05:35.117Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/service, GET} route","timestamp":"2026-04-22T21:05:35.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/profile, POST} route","timestamp":"2026-04-22T21:05:35.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/profile, POST} route","timestamp":"2026-04-22T21:05:35.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:id, GET} route","timestamp":"2026-04-22T21:05:35.118Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:05:35.119Z"}
+{"context":"RoutesResolver","level":"info","message":"PostController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, POST} route","timestamp":"2026-04-22T21:05:35.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post, GET} route","timestamp":"2026-04-22T21:05:35.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/list, GET} route","timestamp":"2026-04-22T21:05:35.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_post, GET} route","timestamp":"2026-04-22T21:05:35.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic, GET} route","timestamp":"2026-04-22T21:05:35.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id, GET} route","timestamp":"2026-04-22T21:05:35.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/comments, GET} route","timestamp":"2026-04-22T21:05:35.121Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/topic/:id/new_comments, GET} route","timestamp":"2026-04-22T21:05:35.121Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise/:id/topic, POST} route","timestamp":"2026-04-22T21:05:35.121Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/post/:id, GET} route","timestamp":"2026-04-22T21:05:35.121Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/post, DELETE} route","timestamp":"2026-04-22T21:05:35.122Z"}
+{"context":"RoutesResolver","level":"info","message":"PraiseController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/praise, POST} route","timestamp":"2026-04-22T21:05:35.122Z"}
+{"context":"RoutesResolver","level":"info","message":"CommentController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, POST} route","timestamp":"2026-04-22T21:05:35.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/comment, GET} route","timestamp":"2026-04-22T21:05:35.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/comment, DELETE} route","timestamp":"2026-04-22T21:05:35.124Z"}
+{"context":"RoutesResolver","level":"info","message":"FollowController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow, POST} route","timestamp":"2026-04-22T21:05:35.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/check, POST} route","timestamp":"2026-04-22T21:05:35.124Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/user, GET} route","timestamp":"2026-04-22T21:05:35.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow_user, POST} route","timestamp":"2026-04-22T21:05:35.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/follow/page, GET} route","timestamp":"2026-04-22T21:05:35.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/cancel/:id/follow/:type, PUT} route","timestamp":"2026-04-22T21:05:35.126Z"}
+{"context":"RoutesResolver","level":"info","message":"QiniuController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.126Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/upload_token, GET} route","timestamp":"2026-04-22T21:05:35.126Z"}
+{"context":"RoutesResolver","level":"info","message":"ChatController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.126Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/send/:id/message, POST} route","timestamp":"2026-04-22T21:05:35.127Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/message/:id/list, GET} route","timestamp":"2026-04-22T21:05:35.127Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new_messages, GET} route","timestamp":"2026-04-22T21:05:35.127Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:id/messages, GET} route","timestamp":"2026-04-22T21:05:35.127Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/friends, GET} route","timestamp":"2026-04-22T21:05:35.127Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/chat_message, DELETE} route","timestamp":"2026-04-22T21:05:35.127Z"}
+{"context":"RoutesResolver","level":"info","message":"InboxController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.128Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/new/:type/inbox, GET} route","timestamp":"2026-04-22T21:05:35.128Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/user/:type/inbox/:messageType, GET} route","timestamp":"2026-04-22T21:05:35.128Z"}
+{"context":"RoutesResolver","level":"info","message":"SaleFriendController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.128Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend, POST} route","timestamp":"2026-04-22T21:05:35.128Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends, GET} route","timestamp":"2026-04-22T21:05:35.129Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friends_v2, GET} route","timestamp":"2026-04-22T21:05:35.129Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/sale_friend/:id, GET} route","timestamp":"2026-04-22T21:05:35.129Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_sale_friend, GET} route","timestamp":"2026-04-22T21:05:35.129Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/sale_friend, DELETE} route","timestamp":"2026-04-22T21:05:35.130Z"}
+{"context":"RoutesResolver","level":"info","message":"MatchLoveController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.130Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love, POST} route","timestamp":"2026-04-22T21:05:35.130Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_loves, GET} route","timestamp":"2026-04-22T21:05:35.130Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/most_new_match_loves, GET} route","timestamp":"2026-04-22T21:05:35.131Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match_love/:id, GET} route","timestamp":"2026-04-22T21:05:35.131Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/match/:id/result, GET} route","timestamp":"2026-04-22T21:05:35.131Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/delete/:id/match_love, DELETE} route","timestamp":"2026-04-22T21:05:35.131Z"}
+{"context":"RoutesResolver","level":"info","message":"CompareFaceController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.132Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/compare_face, POST} route","timestamp":"2026-04-22T21:05:35.132Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/anime_face, POST} route","timestamp":"2026-04-22T21:05:35.132Z"}
+{"context":"RoutesResolver","level":"info","message":"TravelController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.132Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_statistic, GET} route","timestamp":"2026-04-22T21:05:35.133Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/my_rank, GET} route","timestamp":"2026-04-22T21:05:35.133Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/step_travel, POST} route","timestamp":"2026-04-22T21:05:35.133Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_steps, GET} route","timestamp":"2026-04-22T21:05:35.133Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/rand_list, GET} route","timestamp":"2026-04-22T21:05:35.135Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/plan, GET} route","timestamp":"2026-04-22T21:05:35.135Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/create_travel_plan, POST} route","timestamp":"2026-04-22T21:05:35.136Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/ravel_logs, GET} route","timestamp":"2026-04-22T21:05:35.136Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/run_data, POST} route","timestamp":"2026-04-22T21:05:35.136Z"}
+{"context":"RoutesResolver","level":"info","message":"JobController {/api/wechat}:","timestamp":"2026-04-22T21:05:35.136Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job, POST} route","timestamp":"2026-04-22T21:05:35.137Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/apply_job, POST} route","timestamp":"2026-04-22T21:05:35.137Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_jobs, GET} route","timestamp":"2026-04-22T21:05:35.137Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/part_time_job/:id, GET} route","timestamp":"2026-04-22T21:05:35.137Z"}
+{"context":"RoutesResolver","level":"info","message":"UtilsController {/api/wechat/utils}:","timestamp":"2026-04-22T21:05:35.138Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/utils/check_text, POST} route","timestamp":"2026-04-22T21:05:35.138Z"}
+{"context":"RoutesResolver","level":"info","message":"TaskController {/api/wechat/task}:","timestamp":"2026-04-22T21:05:35.138Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/create, POST} route","timestamp":"2026-04-22T21:05:35.138Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/list, GET} route","timestamp":"2026-04-22T21:05:35.139Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_published, GET} route","timestamp":"2026-04-22T21:05:35.139Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/my_accepted, GET} route","timestamp":"2026-04-22T21:05:35.139Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id, GET} route","timestamp":"2026-04-22T21:05:35.140Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/accept, POST} route","timestamp":"2026-04-22T21:05:35.140Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/complete, POST} route","timestamp":"2026-04-22T21:05:35.140Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/task/:id/cancel, POST} route","timestamp":"2026-04-22T21:05:35.140Z"}
+{"context":"RoutesResolver","level":"info","message":"WalletController {/api/wechat/wallet}:","timestamp":"2026-04-22T21:05:35.141Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/info, GET} route","timestamp":"2026-04-22T21:05:35.141Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/recharge, POST} route","timestamp":"2026-04-22T21:05:35.141Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/wallet/withdraw, POST} route","timestamp":"2026-04-22T21:05:35.141Z"}
+{"context":"RoutesResolver","level":"info","message":"GoodsController {/api/wechat/goods}:","timestamp":"2026-04-22T21:05:35.141Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/publish, POST} route","timestamp":"2026-04-22T21:05:35.142Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/list, GET} route","timestamp":"2026-04-22T21:05:35.142Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id, GET} route","timestamp":"2026-04-22T21:05:35.142Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/goods/:id/buy, POST} route","timestamp":"2026-04-22T21:05:35.142Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewController {/api/wechat/review}:","timestamp":"2026-04-22T21:05:35.142Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/wechat/review/create, POST} route","timestamp":"2026-04-22T21:05:35.143Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-04-22T21:05:35.188Z"}
